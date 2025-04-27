@@ -41,92 +41,104 @@ const Home = () => {
   };
 
   return (
-    <div className=" text-white px-4 py-10 min-h-screen">
+    <div className="text-white px-4 sm:px-6 py-8 sm:py-10 min-h-screen">
       {/* Intro Section */}
-      <div className="relative flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto mt-10">
-        {/* Profile Picture - Bigger, no border */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }} 
-          animate={{ opacity: 1, x: 0 }} 
+      <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-6xl mx-auto mt-6 md:mt-10">
+        {/* Profile Picture */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
+          className="flex-shrink-0 mx-auto md:mx-0"
         >
-          <img 
-            src={profilePic} 
-            alt="Profile" 
-            className="w-90 h-120 object-cover rounded-lg shadow-lg relative z-10" 
-            style={{ marginTop: "40px" }} // Pushes it downward
+          <img
+            src={profilePic}
+            alt="Profile"
+            className="w-48 h-64 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg relative z-10"
+            style={{ marginTop: "20px" }}
           />
         </motion.div>
 
         {/* About Section */}
-        <div className="flex flex-col justify-center md:pl-10">
-          <h1 className="text-5xl font-bold mb-4">Hi, I'm Ajinkya Inamdar</h1>
-          <p className="text-gray-400 mb-4 text-xl w-180">Engineer | Passionate about Strategy, Culture & Leadership | Artificial Intelligence</p>
-          <p className="mb-8 text-gray-300 max-w-2xl text-lg">
-            An electronics and telecommunication engineer working across multiple startups, applying strong foundations in ML, leadership, and team management.
-          </p>
-          <div className="flex gap-4  mt-6">
-  <a 
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-[#BAFF39] text-black px-6 py-3 rounded hover:bg-[#6E6E6E] hover:text-white transition"
-  >
-    Get in Touch
-  </a>
-            <a href={cvFile} download className="border border-[#BAFF39] px-6 py-3 rounded text-[#BAFF39] hover:bg-[#6E6E6E] transition">
+        <div className="flex flex-col justify-center md:pl-6 lg:pl-10 text-left mt-4 md:mt-0">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">Hi, I'm Ajinkya Inamdar</h1>
+  <p className="text-gray-400 mb-3 md:mb-4 text-base sm:text-lg md:text-xl max-w-md md:mx-0">
+    Engineer | Passionate about Strategy, Culture & Leadership | Artificial Intelligence
+  </p>
+  <p className="mb-6 text-gray-300 max-w-lg text-sm sm:text-base md:text-lg md:mx-0">
+    An electronics and telecommunication engineer working across multiple startups, applying strong foundations in ML, leadership, and team management.
+  </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+            <a 
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#BAFF39] text-black px-4 py-2 sm:px-6 sm:py-3 rounded hover:bg-[#6E6E6E] hover:text-white transition text-center text-sm sm:text-base"
+            >
+              Get in Touch
+            </a>
+            <a 
+              href={cvFile} 
+              download 
+              className="border border-[#BAFF39] px-4 py-2 sm:px-6 sm:py-3 rounded text-[#BAFF39] hover:bg-[#6E6E6E] transition text-center text-sm sm:text-base"
+            >
               Download CV
             </a>
           </div>
         </div>
       </div>
 
-      <div className="mt-20">
-  <h3 className=" text-5xl font-bold  w-310 text-white mb-4 text-left pl-30">
-    About Me
-  </h3>
-  <div className="text-lg text-gray-300 pl-30 ">
-    
-    <p>
-    I am an engineering graduate with a strong foundation in technology and a growing passion for business management, organizational culture, and human psychology. Alongside my work in Artificial Intelligence and Machine Learning, I have always been deeply curious about the human side of innovation on how leadership, behavior, and culture shape successful organizations.
-    
-    My passion for learning has pushed me to explore a wide range of non-fiction books on business strategy, psychology, and philosophy, helping me build a well-rounded perspective that blends technical expertise with human understanding. I believe that true leadership comes not just from knowledge, but from empathy, vision, and the ability to inspire growth in others.
-    
-    Professionally, I have gained valuable experience by working with two dynamic startups, including co-founding LifeXtension, a community focused on longevity and healthy aging. These experiences have taught me the importance of vision, collaboration, adaptability, and building communities with purpose.
-    
-      I am excited to embark on this next chapter, where I can leverage my technical background, psychological insights, and passion for leadership to create stronger, more innovative, and more compassionate organizations. I firmly believe that the future of business lies at the intersection of technology, human behavior, and visionary leadership and I am committed to being at the forefront of this exciting transformation.
-    </p>
-  </div>
-</div>
+      {/* About Me Section */}
+      <div className="mt-16 sm:mt-20 max-w-6xl mx-auto px-4">
+        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 text-center md:text-left">
+          About Me
+        </h3>
+        <div className="text-sm sm:text-base md:text-lg text-gray-300 text-justify">
+          <p className="mb-4 sm:mb-6">
+            I am an engineering graduate with a strong foundation in technology and a growing passion for business management, organizational culture, and human psychology. Alongside my work in Artificial Intelligence and Machine Learning, I have always been deeply curious about the human side of innovation and how leadership, behavior, and culture shape successful organizations.
+          </p>
+          <p className="mb-4 sm:mb-6">
+            My passion for learning has pushed me to explore a wide range of non-fiction books on business strategy, psychology, and philosophy, helping me build a well-rounded perspective that blends technical expertise with human understanding. I believe that true leadership comes not just from knowledge, but from empathy, vision, and the ability to inspire growth in others.
+          </p>
+          <p className="mb-4 sm:mb-6">
+            Professionally, I have gained valuable experience by working with two dynamic startups, including co-founding LifeXtension, a community focused on longevity and healthy aging. These experiences have taught me the importance of vision, collaboration, adaptability, and building communities with purpose.
+          </p>
+          <p>
+            I am excited to embark on this next chapter, where I can leverage my technical background, psychological insights, and passion for leadership to create stronger, more innovative, and more compassionate organizations. I firmly believe that the future of business lies at the intersection of technology, human behavior, and visionary leadership — and I am committed to being at the forefront of this exciting transformation.
+          </p>
+        </div>
+      </div>
 
 
 
 {/* Work Experience Section */}
-<div className="mt-30  hover:scale-105">
+<div className="mt-20">
   <h2 className="text-4xl font-bold mb-10 text-center">Work Experience</h2>
-  <div className="space-y-8">
+
+  <div className="flex flex-col md:flex-row justify-center items-center gap-10">
     {/* Lead Software Developer */}
-    <div className="mt-10 bg-gray-800 shadow-xl rounded-lg p-5 w-160 h-55 mx-auto  hover:scale-105">
+    <div className="bg-gray-800 shadow-xl rounded-lg p-8 w-full max-w-md hover:scale-105 transition-transform duration-300">
       <h3 className="text-2xl font-semibold text-white mb-2 text-center">
         Lead Software Developer, QCX Energy Pvt. Ltd
       </h3>
-      <p className="text-lg text-gray-300 mb-4 text-center mt-5">
+      <p className="text-lg text-gray-300 mb-4 text-center">
         <strong>Apr 2024 - Present</strong>
       </p>
-      <p className="text-lg text-white mb-30 text-center mt-6">
-        Currently working on a patent associated with QCX Energy Pvt. Ltd, which involves developing software and AI models.
+      <p className="text-lg text-white text-center">
+        Currently working on a patent associated with QCX Energy Pvt. Ltd, involving software and AI model development.
       </p>
     </div>
 
     {/* Co-founder LifeXtension */}
-    <div className="bg-gray-800 shadow-xl rounded-lg p-5 w-160 h-55 mx-auto  hover:scale-105">
+    <div className="bg-gray-800 shadow-xl rounded-lg p-8 w-full max-w-md hover:scale-105 transition-transform duration-300">
       <h3 className="text-2xl font-semibold text-white mb-2 text-center">
         Co-founder, LifeXtension
       </h3>
       <p className="text-lg text-gray-300 mb-4 text-center">
         <strong>Oct 2024 - Present</strong>
       </p>
-      <p className="text-lg text-white mb-4 text-center">
+      <p className="text-lg text-white text-center mb-2">
         LifeXtension is a vibrant community for longevity enthusiasts passionate about healthy aging.
       </p>
       <p className="text-lg text-white text-center">
@@ -135,7 +147,7 @@ const Home = () => {
           href="https://indiaswaytolongevity.wixsite.com/india"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
+          className="text-blue-500 hover:underline"
         >
           LifeXtension Website
         </a>
