@@ -46,18 +46,19 @@ const Home = () => {
       <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-6xl mx-auto mt-6 md:mt-10">
         {/* Profile Picture */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="flex-shrink-0 mx-auto md:mx-0"
-        >
-          <img
-            src={profilePic}
-            alt="Profile"
-            className="w-48 h-64 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg relative z-10"
-            style={{ marginTop: "20px" }}
-          />
-        </motion.div>
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1 }}
+  className="flex-shrink-0 mx-auto md:mx-0"
+>
+  <img
+    src={profilePic}
+    alt="Profile"
+    className="w-65 h-80 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg relative z-10"
+    style={{ marginTop: "20px" }}
+  />
+</motion.div>
+
 
         {/* About Section */}
         <div className="flex flex-col justify-center md:pl-6 lg:pl-10 text-left mt-4 md:mt-0">
