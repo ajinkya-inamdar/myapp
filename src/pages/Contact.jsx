@@ -6,12 +6,13 @@ const Contact = () => {
     <div className="text-white py-20" id="contact">
       <div className="container mx-auto px-6 sm:px-8 md:px-16 lg:px-24">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-12 font-axy">
-          Contact Me
-        </h2>
+        <h2 className="pl-4 text-4xl sm:text-5xl font-bold pt-10 sm:text-center text-white mb-12 font-axy">
+  Contact Me
+</h2>
+
 
         {/* Collaboration Section */}
-        <div className="px-4 sm:px-8 md:pl-20 lg:pl-40">
+        <div className="mt=1 px-4 sm:px-8 md:pl-20 lg:pl-40 pt-5">
           <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-6">
             Let's Collaborate
           </h3>
