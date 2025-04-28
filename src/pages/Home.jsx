@@ -94,7 +94,7 @@ const Home = () => {
         <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 text-center md:text-left">
           About Me
         </h3>
-        <div className="text-sm sm:text-base md:text-lg text-gray-300 text-justify">
+        <div className="text-sm sm:text-base md:text-lg text-gray-300 ">
           <p className="mb-4 sm:mb-6">
             I am an engineering graduate with a strong foundation in technology and a growing passion for business management, organizational culture, and human psychology. Alongside my work in Artificial Intelligence and Machine Learning, I have always been deeply curious about the human side of innovation and how leadership, behavior, and culture shape successful organizations.
           </p>
@@ -156,40 +156,38 @@ const Home = () => {
   </div>
 </div>
 
-      {/* Skills Section */}
-      <div className="mt-30 max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 text-center">Skills</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {skillsData.map((skill, i) => (
-            <div key={i} className="w-full h-48 perspective">
-              <div className="relative w-full h-full transition-transform duration-700 transform-style preserve-3d hover:rotate-y-180">
-                {/* Front Side */}
-                <div className="absolute w-full h-full backface-hidden bg-gray-800 rounded-lg p-4 flex flex-col items-center justify-center">
-                  <h3 className="text-xl font-bold">{skill.title}</h3>
-                  <p className="text-[#BAFF39] mt-2">{skill.level}</p>
-                </div>
-                {/* Back Side */}
-                <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-gray-800 rounded-lg p-4 flex items-center justify-center text-center">
-                  <p className="text-xl font-semibold">{skill.details}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+{/* Skills Section */}
+<div className="mt-30 max-w-4xl mx-auto px-4">
+  <h2 className="text-4xl font-bold mb-10 text-center">Skills</h2>
+  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+    {skillsData.map((skill, i) => (
+      <div key={i} className="flip-card w-full h-48">
+        <div className="flip-card-inner w-full h-full">
+          {/* Front Side */}
+          <div className="flip-card-front p-4">
+            <h3 className="text-xl font-bold">{skill.title}</h3>
+            <p className="text-[#BAFF39] mt-2">{skill.level}</p>
+          </div>
+          {/* Back Side */}
+          <div className="flip-card-back p-4 text-center">
+            <p className="text-xl font-semibold">{skill.details}</p>
+          </div>
         </div>
       </div>
+    ))}
+  </div>
+</div>
 
-
-
-      <div className="mt-30">
+{/* Projects Section */}
+<div className="mt-30 px-4">
   <h2 className="text-4xl font-bold mt-10 mb-10 text-center">My Projects</h2>
   <div className="flex flex-wrap justify-center gap-8">
-
-    {/* Attendance Project - Flip Card */}
-    <div className="w-100 h-96 perspective">
-      <div className="relative w-full h-full transition-transform duration-700 transform-style preserve-3d hover:rotate-y-180">
-        
-        {/* Front Side */}
-        <div className="absolute w-full h-full bg-gray-800 rounded-lg shadow-xl flex flex-col items-center justify-center backface-hidden">
+    
+    {/* Attendance Project */}
+    <div className="flip-card w-80 h-96">
+      <div className="flip-card-inner w-full h-full">
+        {/* Front */}
+        <div className="flip-card-front shadow-xl p-4">
           <img 
             src={attendanceImg} 
             alt="Attendance Project" 
@@ -199,9 +197,8 @@ const Home = () => {
             Image Paragraph Generation for Attendance Application
           </h3>
         </div>
-
-        {/* Back Side */}
-        <div className="absolute w-full h-full bg-gray-900 rounded-lg shadow-xl p-6 text-center transform rotate-y-180 backface-hidden flex flex-col justify-center">
+        {/* Back */}
+        <div className="flip-card-back shadow-xl p-6 text-center">
           <p className="text-l text-gray-300 mb-2">
             <strong>Mentor:</strong> Mr. Krunal Pawar
           </p>
@@ -209,22 +206,20 @@ const Home = () => {
             <strong>Team Size:</strong> 4
           </p>
           <p className="text-l text-gray-300 mb-2">
-            <strong>Key Skills:</strong> Image Processing, Computer Vision, Deep Learning, Architectures, Data Processing, NLP
+            <strong>Key Skills:</strong> Image Processing, Computer Vision, Deep Learning, NLP
           </p>
           <p className="text-l text-white mt-4">
-            Developed an innovative solution for automating attendance tracking using image processing and natural language generation.
+            Developed an innovative solution for automating attendance tracking.
           </p>
         </div>
-
       </div>
     </div>
 
-    {/* Stock Market Project - Flip Card */}
-    <div className="w-100 h-96 perspective">
-      <div className="relative w-full h-full transition-transform duration-700 transform-style preserve-3d hover:rotate-y-180">
-        
-        {/* Front Side */}
-        <div className="absolute w-full h-full bg-gray-800 rounded-lg shadow-xl flex flex-col items-center justify-center backface-hidden">
+    {/* Stock Market Project */}
+    <div className="flip-card w-80 h-96">
+      <div className="flip-card-inner w-full h-full">
+        {/* Front */}
+        <div className="flip-card-front shadow-xl p-4">
           <img 
             src={stockMarketImg} 
             alt="Stock Market Project" 
@@ -234,9 +229,8 @@ const Home = () => {
             Stock Market Price Prediction
           </h3>
         </div>
-
-        {/* Back Side */}
-        <div className="absolute w-full h-full bg-gray-900 rounded-lg shadow-xl p-6 text-center transform rotate-y-180 backface-hidden flex flex-col justify-center">
+        {/* Back */}
+        <div className="flip-card-back shadow-xl p-6 text-center">
           <p className="text-l text-gray-300 mb-2">
             <strong>Mentor:</strong> Dr. Vijay Muthekar
           </p>
@@ -244,18 +238,18 @@ const Home = () => {
             <strong>Team Size:</strong> 4
           </p>
           <p className="text-l text-gray-300 mb-2">
-            <strong>Key Skills:</strong> Data Analysis, Neural Networks, Feature Engineering, Time Series Analysis
+            <strong>Key Skills:</strong> Data Analysis, Neural Networks, Time Series Analysis
           </p>
           <p className="text-l text-white mt-4">
-            Used machine learning models like reinforcement learning, SVM, random forests, clustering, gradient boosting, decision trees, and RNNs to predict stock market trends.
+            Used advanced models like reinforcement learning, SVMs, RNNs to predict trends.
           </p>
         </div>
-
       </div>
     </div>
 
   </div>
 </div>
+
 
 
 
