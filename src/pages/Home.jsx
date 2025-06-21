@@ -236,7 +236,7 @@ const Home = () => {
     ].map((project, i) => {
      const baseColors = ['bg-blue-100', 'bg-white'];
 const hoverColors = [
-  'hover:bg-blue-100 active:bg-green-500',
+  'hover:bg-blue-100 active:bg-blue-100',
   'hover:bg-white active:bg-white'
 ];
 
@@ -289,7 +289,7 @@ const hoverColors = [
 
 
 {/* Certifications Section */}
-<div className="rounded-lg border-2 border-black bg-blue-100 mt-32 mx-auto w-full md:w-[600px] px-4 py-8 transition duration-300 hover:bg-green-200 active:bg-blue-300">
+<div className="rounded-lg border-2 border-black bg-blue-100 mt-32 mx-auto w-full md:w-[600px] px-4 py-8 transition duration-300 hover:bg-blue-100 active:bg-blue-100">
   <h2 className="text-black text-4xl font-bold mb-10 text-center mt-4">
     Certifications
   </h2>
