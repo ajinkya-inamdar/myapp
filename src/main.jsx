@@ -10,25 +10,10 @@ import CV from './pages/CV';
 import Contact from './pages/Contact';
 import WorkExperience from './pages/WorkExperience';
 import './index.css';
-import backgroundVideo from './assets/background-video.mp4'; // ✅ Import your video here
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className="relative min-h-screen overflow-hidden">
-      
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-      >
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Main Content */}
+    <div className="bg-#eeeee4 min-h-screen">
       <Router>
         <Navbar />
         <Routes>
@@ -43,5 +28,3 @@ createRoot(document.getElementById('root')).render(
     </div>
   </StrictMode>
 );
-
-

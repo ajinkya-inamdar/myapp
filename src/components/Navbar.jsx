@@ -3,19 +3,19 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false); // Mobile menu toggle
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'CV', path: '/cv' },
+    { name: 'Resume', path: '/cv' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-transparent z-50 backdrop-blur-md">
+    <nav className="fixed top-0 w-full z-50 bg-white backdrop-blur-md border-3 border-black square-md shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-white hover:text-gray-300 transition-colors duration-300">
+        <div className="text-2xl font-bold text-black hover:text-gray-300 transition-colors duration-300">
           Ajinkya Inamdar
         </div>
 
@@ -25,7 +25,7 @@ const Navbar = () => {
             <Link
               key={item.name}
               to={item.path}
-              className={`text-white hover:text-gray-300 transition-colors duration-300 ${
+              className={`text-black hover:text-gray-900 transition-colors duration-300 ${
                 location.pathname === item.path ? 'font-semibold underline underline-offset-4' : ''
               }`}
             >
@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white focus:outline-none"
+            className="text-black focus:outline-none"
           >
             {menuOpen ? (
               // Close Icon
@@ -62,7 +62,7 @@ const Navbar = () => {
             <Link
               key={item.name}
               to={item.path}
-              onClick={() => setMenuOpen(false)} // Close menu when clicked
+              onClick={() => setMenuOpen(false)}
               className={`text-white text-xl hover:text-gray-300 transition-colors duration-300 ${
                 location.pathname === item.path ? 'font-semibold underline underline-offset-4' : ''
               }`}

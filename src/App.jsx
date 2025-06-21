@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import background from './assets/background1.jpg';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,12 +8,7 @@ function App() {
 
   return (
     <>
-      <div
-        className="min-h-screen bg-top bg-repeat-y bg-cover"
-        style={{
-          backgroundImage: `url(${background})`,
-        }}
-      >
+      <div className="min-h-screen bg-#eeeee4">
         {/* Navbar */}
         <nav className="flex items-center justify-between px-6 py-4 bg-gray-900 bg-opacity-80 fixed w-full z-50">
           {/* Logo */}
@@ -34,11 +28,11 @@ function App() {
               {isOpen ? (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                </svg> // Close icon
+                </svg>
               ) : (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8h16M4 16h16" />
-                </svg> // Hamburger icon
+                </svg>
               )}
             </button>
           </div>
@@ -54,7 +48,7 @@ function App() {
         )}
 
         {/* Main Content */}
-        <div className="pt-24"> {/* padding-top to push content below nav */}
+        <div className="pt-24">
           {/* Logo Section */}
           <div className="flex justify-center items-center flex-wrap gap-8 py-8">
             <a href="https://vite.dev" target="_blank" className="flex justify-center items-center">
@@ -66,7 +60,7 @@ function App() {
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl md:text-5xl font-bold text-center text-white mt-6 md:mt-10 font-poppins">
+          <h1 className="text-3xl md:text-5xl font-bold text-center text-gray-900 mt-6 md:mt-10 font-poppins">
             Ajinkya Inamdar
           </h1>
 
@@ -84,7 +78,7 @@ function App() {
           </div>
 
           {/* Footer */}
-          <p className="mt-6 text-center text-gray-400 text-sm md:text-base font-poppins px-4 md:px-0">
+          <p className="mt-6 text-center text-gray-600 text-sm md:text-base font-poppins px-4 md:px-0">
             Click on the Vite and React logos to learn more
           </p>
         </div>
@@ -94,4 +88,3 @@ function App() {
 }
 
 export default App;
-
