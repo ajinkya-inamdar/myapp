@@ -75,14 +75,14 @@ const Home = () => {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-grey-100 border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black hover:bg-green-500  transition text-center text-sm sm:text-base"
+              className="bg-green-200 border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black hover:bg-green-200  transition text-center text-sm sm:text-base"
             >
               Get in Touch
             </a>
             <a 
               href={cvFile} 
               download 
-              className="bg-blue-100 border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black  hover:bg-blue-500 transition text-center text-sm sm:text-base"
+              className="bg-blue-100 border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black  hover:bg-blue-100 transition text-center text-sm sm:text-base"
             >
               Download CV
             </a>
@@ -127,7 +127,7 @@ const Home = () => {
     </div>
 
     {/* Co-founder LifeXtension */}
-    <div className="bg-green-100 shadow-xl rounded-lg p-8 w-full max-w-md border-2 border-black hover:scale-105 transition-transform duration-300 hover:bg-green-400 active:bg-green-300 cursor-pointer">
+    <div className="bg-green-200 shadow-xl rounded-lg p-8 w-full max-w-md border-2 border-black hover:scale-105 transition-transform duration-300 hover:bg-green-200 active:bg-green-200 cursor-pointer">
       <h3 className="text-2xl font-semibold text-black mb-2 text-center">
         Co-founder, LifeXtension
       </h3>
@@ -143,7 +143,7 @@ const Home = () => {
           href="https://indiaswaytolongevity.wixsite.com/india"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
+          className="text-blue-800 hover:underline"
         >
           LifeXtension Website
         </a>
@@ -170,11 +170,11 @@ const Home = () => {
 
       const hoverColors = [
         'hover:bg-white',
-        'hover:bg-blue-500',
+        'hover:bg-blue-100',
         'hover:bg-white',
-        'hover:bg-blue-500',
+        'hover:bg-blue-100',
         'hover:bg-white',
-        'hover:bg-blue-500',
+        'hover:bg-blue-100',
       ];
 
       const baseColor = baseColors[i % baseColors.length];
@@ -234,9 +234,9 @@ const Home = () => {
         description: "Used advanced models like reinforcement learning, SVMs, RNNs to predict trends."
       }
     ].map((project, i) => {
-     const baseColors = ['bg-[#E9FCE9]', 'bg-white'];
+     const baseColors = ['bg-blue-100', 'bg-white'];
 const hoverColors = [
-  'hover:bg-green-400 active:bg-green-400',
+  'hover:bg-blue-100 active:bg-green-500',
   'hover:bg-white active:bg-white'
 ];
 
@@ -289,7 +289,7 @@ const hoverColors = [
 
 
 {/* Certifications Section */}
-<div className="rounded-lg border-2 border-black bg-blue-100 mt-32 mx-auto w-full md:w-[560px] px-4 py-8 transition duration-300 hover:bg-blue-300 active:bg-blue-300">
+<div className="rounded-lg border-2 border-black bg-blue-100 mt-32 mx-auto w-full md:w-[600px] px-4 py-8 transition duration-300 hover:bg-green-200 active:bg-blue-300">
   <h2 className="text-black text-4xl font-bold mb-10 text-center mt-4">
     Certifications
   </h2>
