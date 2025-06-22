@@ -181,28 +181,14 @@ const CV = () => {
       {/* Original Resume Section (unchanged) */}
       <div className="mt-32">
         <div className="text-left md:text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black">Resume</h1>
+          <h1 className="text-xl sm:text-4xl md:text-5xl font-bold text-black">Discover more about me</h1>
           <p className="text-lg sm:text-xl text-white mt-2">Electronics & Telecommunication Engineer | AI Innovator | Longevity Enthusiast</p>
         </div>
 
         <div className="bg-white bg-opacity-10 backdrop-blur-md border-3 border-black shadow-2xl rounded-2xl p-6 sm:p-10 space-y-12">
-          <div><p className="text-black text-base sm:text-lg">An electronics and telecommunication engineer with a strong foundation in machine learning, leadership, and team management.</p></div>
+          
 
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold bg-white text-black px-4 sm:px-6 py-2 sm:py-3 mb-4 border-2 border-black">Experience</h2>
-            <div className="mb-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-black">Lead Software Developer</h3>
-              <p className="text-sm text-black"><strong>QCX Energy Pvt. Ltd</strong> | Apr 2024 - Apr 2025</p>
-              <p className="text-blue-600">Worked on a patent associated with QCX Energy Pvt. Ltd, involving software and AI model development.</p>
-            </div>
-            <div className="mb-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-black">Co-founder</h3>
-              <p className="text-sm text-black"><strong>LifeXtension</strong> | Oct 2024 - Present</p>
-              <p className="text-blue-600">LifeXtension is a vibrant community for longevity enthusiasts passionate about healthy aging.<br />
-                <a href="https://indiaswaytolongevity.wixsite.com/india" target="_blank" rel="noopener noreferrer" className="text-green hover:underline">Visit LifeXtension</a>
-              </p>
-            </div>
-          </div>
+          
 
           <div>
             <h2 className="text-2xl sm:text-3xl font-semibold bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 mb-4 border-2 border-black">Education</h2>
@@ -211,21 +197,7 @@ const CV = () => {
             <p className="text-black"><strong>B.Tech in Electronics & Telecommunication</strong> - MIT Academy of Engineering, Pune</p>
           </div>
 
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 mb-4 border-2 border-black">Skills</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-              {[
-                "Machine Learning",
-                "Artificial Neural Networks",
-                "Web Development",
-                "Team Management",
-                "Product Development",
-                "Leadership & Communication"
-              ].map((skill, index) => (
-                <div key={index} className="bg-white bg-opacity-30 py-2 px-4 rounded-lg shadow-md text-black">{skill}</div>
-              ))}
-            </div>
-          </div>
+          
 
           <div>
             <h2 className="text-2xl sm:text-3xl font-semibold bg-white text-gray-800 px-4 sm:px-6 py-2 sm:py-3 mb-4 mt-10 border-2 border-black">Hobbies & Interests</h2>

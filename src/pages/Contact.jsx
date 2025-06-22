@@ -45,7 +45,7 @@
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border rounded text-black bg-white text-black px-4 py-2 sm:px-6 sm:py-3 rounded hover:bg-green-500 hover:text-white transition text-center text-sm sm:text-base"
+                className="border rounded text-black bg-white text-black px-4 py-2 sm:px-6 sm:py-3 rounded hover:bg-white hover:text-black transition text-center text-sm sm:text-base"
               >
                 Get in Touch
               </a>
