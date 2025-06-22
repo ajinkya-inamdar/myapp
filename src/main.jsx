@@ -9,6 +9,8 @@ import Projects from './pages/Projects';
 import CV from './pages/CV';
 import Contact from './pages/Contact';
 import WorkExperience from './pages/WorkExperience';
+import BlogList from './pages/BlogList';     // ✅ Add this
+import BlogPost from './pages/BlogPost';     // ✅ And this
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
@@ -20,8 +22,12 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/cv" element={<CV />} />
-          <Route path="/work-experience" element={<WorkExperience />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/work-experience" element={<WorkExperience />} />
+          
+          {/* ✅ Blog Pages */}
+          <Route path="/blog" element={<BlogList />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
         </Routes>
         <Footer />
       </Router>
