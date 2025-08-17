@@ -1,4 +1,12 @@
+/* ✅ Google Fonts import must be FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+/* ✅ Tailwind must come AFTER fonts */
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .perspective {
   perspective: 1000px;
 }

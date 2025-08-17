@@ -30,34 +30,28 @@ const Home = () => {
           />
         </motion.div>
 
-        {/* About Section */}
-        <div className="flex flex-col justify-center md:pl-6 lg:pl-10 text-left mt-4 md:mt-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">Hi, I'm Ajinkya Inamdar</h1>
-          <p className="text-black-400 mb-3 md:mb-4 text-base sm:text-lg md:text-xl max-w-md md:mx-0">
-            Engineer | Passionate about Strategy, Culture & Leadership | Artificial Intelligence
-          </p>
-          <p className="mb-6 text-black-300 max-w-lg text-sm sm:text-base md:text-lg md:mx-0">
-            An electronics and telecommunication engineer with a strong foundation in machine learning, leadership, and team management.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-            <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black hover:bg-white transition text-center text-sm sm:text-base"
-            >
-              Get in Touch
-            </a>
-            <a 
-              href={cvFile} 
-              download 
-              className="bg-blue-100 border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black hover:bg-blue-100 transition text-center text-sm sm:text-base"
-            >
-              Download CV
-            </a>
-          </div>
-        </div>
-      </div>
+{/*About Section*/}
+<div className="flex flex-col justify-center md:pl-6 lg:pl-10 text-left mt-4 md:mt-0">
+  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">Hi, I'm Ajinkya Inamdar</h1>
+  <p className="text-black-400 mb-3 md:mb-4 text-base sm:text-lg md:text-xl max-w-md md:mx-0">
+    Engineer | Passionate about Strategy, Culture & Leadership | Artificial Intelligence
+  </p>
+  <p className="mb-6 text-black-300 max-w-lg text-sm sm:text-base md:text-lg md:mx-0">
+    An electronics and telecommunication engineer with a strong foundation in machine learning, leadership, and team management.
+  </p>
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+    <a 
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black hover:bg-white transition text-center text-sm sm:text-base"
+    >
+      Get in Touch
+    </a>
+    {/* The "Download CV" button has been removed from here. */}
+  </div>
+</div>
+</div>
 
       {/* About Me Section */}
       <div className="mt-16 sm:mt-5 max-w-6xl mx-auto px-4">
@@ -77,24 +71,29 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Latest Blog Posts */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-black">Latest Blog Posts</h2>
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.slice(0, 3).map((post) => (
-            <BlogCard key={post.id} blog={post} />
-          ))}
-        </div>
-        <div className="flex justify-center mt-10">
-  <a 
-    href="/blog" 
-    className="border-2 border-black px-6 py-2 rounded-md text-black font-semibold text-lg hover:bg-white hover:text-black transition"
-  >
-    View All Blogs
-  </a>
+{/* Latest Blog Posts */}
+<div className="max-w-6xl mx-auto px-4 py-16">
+  <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-black">
+    Latest Blog Posts
+  </h2>
+  <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {blogPosts
+      .sort((a, b) => new Date(b.date) - new Date(a.date)) // sort by latest date
+      .slice(0, 3) // take latest 3
+      .map((post) => (
+        <BlogCard key={post.id} blog={post} />
+      ))}
+  </div>
+  <div className="flex justify-center mt-10">
+    <a
+      href="/blog"
+      className="border-2 border-black px-6 py-2 rounded-md text-black font-semibold text-lg hover:bg-white hover:text-black transition"
+    >
+      View All Blogs
+    </a>
+  </div>
 </div>
-      </div>
-    </div>
+</div>
   );
 };
 

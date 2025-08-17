@@ -8,12 +8,13 @@ const BlogCard = ({ blog }) => {
       <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h3 className="text-xl font-bold text-black mb-2">{blog.title}</h3>
-        <p className="text-sm text-gray-800 mb-4">{blog.date}</p>
+        <p className="text-L text-gray-800 mb-4">Ajinkya Inamdar</p>
+        <p className="text-sm text-gray-800 mb-1">{blog.date}</p>
         <Link
           to={`/blog/${blog.id}`}
-          className="text-blue-600 hover:underline font-medium"
+          className="text-green-600 hover:underline font-medium"
         >
-          Read More →
+          Read More 
         </Link>
       </div>
     </div>
