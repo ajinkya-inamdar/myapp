@@ -60,13 +60,13 @@ const Home = () => {
         </h3>
         <div className="text-sm sm:text-base md:text-lg text-black-300 ">
           <p className="mb-4 sm:mb-6">
-            I'm an engineering graduate with a strong foundation in technology and a growing passion for product development, organizational culture, and leadership.
+            I'm an engineering graduate with a strong foundation in technology and a growing passion for leadership and management.
           </p>
           <p className="mb-4 sm:mb-6">
             I continuously explore topics like business strategy, leadership, and workplace culture to bridge the gap between technical execution and human-centered design.
           </p>
           <p className="mb-4 sm:mb-6">
-           I write blogs that explore the crossroads of business, psychology, philosophy, technology and current trends offering insights that challenge perspectives and spark meaningful conversation. Whether you're here to connect, reflect, or stay ahead of the curve, there's something here for you.
+           I write blogs that explore the crossroads of business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering insights that challenge perspectives and spark meaningful conversation. Whether you're here to connect, reflect, or stay ahead of the curve, there's something here for you.
           </p>
         </div>
       </div>
