@@ -13,6 +13,8 @@ import BlogList from './pages/BlogList';     // ✅ Add this
 import BlogPost from './pages/BlogPost';     // ✅ And this
 import './index.css';
 
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className="bg-#eeeee4 min-h-screen">
