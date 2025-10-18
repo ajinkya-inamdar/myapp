@@ -14,9 +14,9 @@ import cvFile from '../assets/Ajinkya_Inamdar_CV.pdf';
 
 const skillsData = [
   { title: "Machine Learning", level: "Intermediate", details: "Experienced with Python, TensorFlow, and Scikit-learn." },
-  { title: "Team Management", level: "Advanced", details: "Led multiple tech teams successfully." },
+  { title: "Team Management", level: "Beginner", details: "Building expertise in team leadership and coordination." },
   { title: "Web Development", level: "Advanced", details: "Built websites using React.js, Vite, Tailwind CSS." },
-  { title: "Product Development", level: "Beginner", details: "Learning agile methodology and lean startup principles." },
+  { title: "Business Development", level: "Beginner", details: "Learning to manage clients and deal execution" },
   { title: "Hindi & Marathi", level: "Native", details: "Fluent for communication and collaboration." },
   { title: "English", level: "Professional", details: "Proficient in technical and professional communication." },
 ];
