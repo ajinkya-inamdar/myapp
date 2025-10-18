@@ -37,7 +37,7 @@ const Home = () => {
     Engineer | Strategy, Management & Leadership | Artificial Intelligence | Human Longevity and Health-tech
   </p>
   <p className="mb-6 text-black-300 max-w-lg text-sm sm:text-base md:text-lg md:mx-0">
-    Engineer with a strong foundation in machine learning, leadership, and team management.
+    Interested in working with me?
   </p>
   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
     <a 
@@ -66,7 +66,7 @@ const Home = () => {
             He continuously explore topics like business strategy, leadership and Health-tech to bridge the gap between technical execution and User driven solutions.
           </p>
           <p className="mb-4 sm:mb-6">
-           He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering insights ngful. Whether you're here to connect, reflect, or stay ahead of the curve, there's something here for you.
+           He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights. Whether you're here to connect, reflect, or stay ahead of the curve, there's something here for you.
           </p>
         </div>
       </div>
