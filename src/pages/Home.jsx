@@ -34,7 +34,7 @@ const Home = () => {
 <div className="flex flex-col justify-center md:pl-6 lg:pl-10 text-left mt-4 md:mt-0">
   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">Hi, I'm Ajinkya Inamdar</h1>
   <p className="text-black-400 mb-3 md:mb-4 text-base sm:text-lg md:text-xl max-w-md md:mx-0">
-    Engineer | Strategy, Managemnt & Leadership | Artificial Intelligence | Human Longevity and Health-tech
+    Engineer | Strategy, Management & Leadership | Artificial Intelligence | Human Longevity and Health-tech
   </p>
   <p className="mb-6 text-black-300 max-w-lg text-sm sm:text-base md:text-lg md:mx-0">
     Engineer with a strong foundation in machine learning, leadership, and team management.
