@@ -1,22 +1,16 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import sitemap from 'vite-plugin-pages-sitemap'  // 🧩 Add this import
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+
+
+// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    sitemap({
-
-      hostname: 'https://ajinkyainamdar.vercel.app/',
-
-
-    }),
-  ],
+  plugins: [react(),tailwindcss()],
   base: '/',
   server: {
     historyApiFallback: true,
-  },
+  }
 })
+
+
