@@ -11,10 +11,7 @@ const Home = () => {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Ajinkya Inamdar - Engineer | Strategy & Leadership | AI & Health-tech</title>
-        <meta 
-          name="description" 
-          content="Ajinkya Inamdar - Engineering graduate passionate about strategy, leadership, artificial intelligence, human longevity, and health-tech. Explore blogs on business, health, fitness, and technology."
-        />
+        
         <meta 
           name="keywords" 
           content="Ajinkya Inamdar, engineer, strategy, leadership, artificial intelligence, AI, health-tech, longevity, business, fitness, technology, blog"
