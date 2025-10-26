@@ -8,10 +8,7 @@ const WorkExperience = () => {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Work Experience | Ajinkya Inamdar</title>
-        <meta
-          name="description"
-          content="Ajinkya Inamdar's professional experience includes roles as Lead Software Developer at QCX Energy Pvt. Ltd and Co-founder at LifeXtension, a community focused on longevity and healthy aging."
-        />
+        
         <meta
           name="keywords"
           content="Ajinkya Inamdar, work experience, QCX Energy, LifeXtension, software development, AI models, longevity, healthy aging, co-founder"

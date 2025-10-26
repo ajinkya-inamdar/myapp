@@ -45,10 +45,7 @@ const CV = () => {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Ajinkya Inamdar - CV | Engineer, AI, Leadership & Health-tech</title>
-        <meta 
-          name="description" 
-          content="Ajinkya Inamdar - Digital portfolio showcasing skills, projects, certifications, and work experience in engineering, AI, leadership, and health-tech."
-        />
+        
         <meta 
           name="keywords" 
           content="Ajinkya Inamdar, CV, Digital Portfolio, Engineer, AI, Leadership, Health-tech, Skills, Projects, Certifications, Work Experience"

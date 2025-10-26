@@ -8,10 +8,7 @@ const Contact = () => {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Ajinkya Inamdar - Contact | Engineer, Strategy & Leadership</title>
-        <meta 
-          name="description" 
-          content="Get in touch with Ajinkya Inamdar, an engineering graduate passionate about strategy, leadership, AI, health-tech, and human longevity. Open for collaborations, projects, and opportunities."
-        />
+        
         <meta 
           name="keywords" 
           content="Ajinkya Inamdar, contact, engineer, strategy, leadership, AI, health-tech, longevity, collaboration, projects, opportunities"

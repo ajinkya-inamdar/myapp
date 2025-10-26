@@ -10,10 +10,7 @@ const Projects = () => {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>My Projects | Ajinkya Inamdar</title>
-        <meta
-          name="description"
-          content="Explore Ajinkya Inamdar's innovative projects including an Image Paragraph Generation for Attendance application and Stock Market Trends Prediction using advanced AI and data science techniques."
-        />
+       
         <meta
           name="keywords"
           content="Ajinkya Inamdar, projects, image processing, computer vision, NLP, deep learning, stock market prediction, data science, machine learning, AI projects"
