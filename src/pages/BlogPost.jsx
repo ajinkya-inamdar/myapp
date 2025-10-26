@@ -8,56 +8,53 @@ const BlogPost = () => {
   const blog = blogPosts.find((post) => post.id === id);
 
   if (!blog) {
-    return <div className="text-center text-red-600 text-xl pt-24">Blog not found.</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center px-4 pt-24">
+        <div className="text-red-600 text-xl">Blog post not found.</div>
+      </div>
+    );
   }
 
   return (
     <>
-      {/* SEO Meta Tags */}
       <Helmet>
         <title>{blog.title} | Ajinkya Inamdar Blog</title>
         <meta 
           name="description" 
           content={blog.description || blog.content.substring(0, 160)} 
         />
-        <meta 
-          name="keywords" 
-          content={`Ajinkya Inamdar, blog, ${blog.title}, ${blog.tags?.join(', ') || ''}`} 
-        />
-        <meta property="og:title" content={`${blog.title} | Ajinkya Inamdar Blog`} />
-        <meta property="og:description" content={blog.description || blog.content.substring(0, 160)} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://ajinkyainamdar.vercel.app/blog/${id}`} />
-        <meta property="og:image" content={blog.ogImage || blog.image} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      <div className="max-w-3xl mx-auto px-4 pt-24 pb-12">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-24 pb-12">
         {/* Blog Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-black">{blog.title}</h1>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
+          {blog.title}
+        </h1>
 
-        {/* Blog Description (visible on page) */}
+        {/* Blog Description */}
         {blog.description && (
-          <p className="text-lg text-gray-700 mb-6">{blog.description}</p>
+          <p className="text-base sm:text-lg text-gray-700 mb-6">
+            {blog.description}
+          </p>
         )}
 
         {/* Author and Date */}
-        <div className="flex items-center gap-4 mb-6">
-          <p className="text-base text-gray-800">Ajinkya Inamdar</p>
-          <span className="text-gray-400">•</span>
-          <p className="text-sm text-gray-600">{blog.date}</p>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-6">
+          <p className="text-gray-800 font-medium">Ajinkya Inamdar</p>
+          <span className="hidden sm:inline text-gray-400 mx-2">•</span>
+          <p className="text-gray-600 text-sm">{blog.date}</p>
         </div>
 
         {/* Blog Image */}
         <img
           src={blog.image}
           alt={blog.title}
-          className="w-full h-auto mb-8 rounded-lg shadow-md"
+          className="w-full h-auto mb-6 rounded-lg shadow-md"
         />
 
         {/* Blog Content */}
         <div
-          className="prose max-w-none text-gray-800 leading-relaxed"
+          className="prose max-w-none text-gray-800"
           dangerouslySetInnerHTML={{ __html: blog.content }}
         />
       </div>
