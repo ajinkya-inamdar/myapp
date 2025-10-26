@@ -9,11 +9,9 @@ import Projects from './pages/Projects';
 import CV from './pages/CV';
 import Contact from './pages/Contact';
 import WorkExperience from './pages/WorkExperience';
-import BlogList from './pages/BlogList';     // ✅ Add this
-import BlogPost from './pages/BlogPost';     // ✅ And this
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
 import './index.css';
-
-
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,8 +24,6 @@ createRoot(document.getElementById('root')).render(
           <Route path="/cv" element={<CV />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/work-experience" element={<WorkExperience />} />
-          
-          {/* ✅ Blog Pages */}
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/:id" element={<BlogPost />} />
         </Routes>

@@ -8,7 +8,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Portfolio', path: '/cv' },
-    { name: 'Blogs', path: '/blog' },  // ✅ Blog added here
+    { name: 'Blogs', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -16,8 +16,10 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-white backdrop-blur-md border-3 border-black square-md shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-black hover:text-gray-300 transition-colors duration-300">
-          Ajinkya Inamdar
+        <div className={`text-2xl font-bold transition-colors duration-300 ${
+          location.pathname === '/' ? 'text-black' : 'text-black'
+        }`}>
+          <Link to="/">Ajinkya Inamdar</Link>
         </div>
 
         {/* Desktop Menu */}

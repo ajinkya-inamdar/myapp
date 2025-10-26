@@ -10,7 +10,11 @@ export const blogPosts = [
     id: '1',
     title: 'Why Netflix’s “No Vacation Policy” Works',
     date: 'June 12, 2025',
+    category: 'Business and Management',
     image: netflixVacationImg,
+    description: 'Learn why Netflix’s no-vacation policy boosts trust, performance, and culture.',
+    keywords: 'Netflix, no vacation policy, HR, company culture, productivity',
+    ogImage: 'https://yourwebsite.com/assets/blogs/netflix-vacation-og.jpg',
     content: `
       <p class="font-serif text-lg leading-relaxed tracking-wide mb-4">
         <strong>Based on the book <em>No Rules Rules</em> by Netflix CEO Reed Hastings and Erin Meyer.</strong>
@@ -76,12 +80,17 @@ export const blogPosts = [
 
       <p class="mt-6 italic text-gray-600 font-serif text-base">Next question: how can we apply this in an organization with lower talent density?</p>
     `
+    
   },
   {
     id: '2',
     title: 'Leadership means "Breaking Barriers"',
     date: 'August 17, 2025',
+    category: 'Business and Management',
     image: breakingBarriersImg, 
+    ogImage: breakingBarriersImg, 
+    description: 'Explore how true leadership is about ownership, advocacy, and transforming systems to achieve results beyond effort.',
+    tags: ['leadership', 'management', 'ownership', 'advocacy', 'Breaking Barriers'],
     content: `
       <h3 class="text-2xl font-bold font-sans mt-6 mb-2 tracking-tight">Beyond Effort: True Leadership is Ownership</h3>
       <p class="font-sans text-base leading-relaxed mb-4">
