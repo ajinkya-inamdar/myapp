@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ✅ Extract only text (ignore image imports)
+// ✅ Extract blog post data from blogData.js (ignoring image imports)
 let blogPosts = [];
 try {
   const blogDataText = fs.readFileSync(
@@ -15,7 +15,7 @@ try {
     "utf8"
   );
 
-  // Extract slugs, dates, and titles using regex
+  // Extract slugs and dates using regex
   const matches = [
     ...blogDataText.matchAll(
       /slug:\s*['"`](.*?)['"`],[\s\S]*?date:\s*['"`](.*?)['"`]/g
@@ -26,12 +26,14 @@ try {
   console.error("⚠️ Could not load blogData.js. Check path or format.", err);
 }
 
-// 🌍 Replace with your live domain
-const BASE_URL = "https://ajinkyainamdar.vercel.app/";
+// 🌍 Replace with your live domain (no trailing slash)
+const BASE_URL = "https://ajinkyainamdar.vercel.app";
 
 function generateSitemap() {
-  const staticPages = ["", "projects", "cv", "contact"];
+  // ✅ Add main pages and blog listing page
+  const staticPages = ["", "projects", "cv", "contact", "blog"];
 
+  // 🧱 Generate URLs for static pages
   const staticUrls = staticPages
     .map(
       (page) => `
@@ -43,6 +45,7 @@ function generateSitemap() {
     )
     .join("");
 
+  // 📝 Generate URLs for each blog post
   const blogUrls = blogPosts
     .map(
       (post) => `
@@ -55,6 +58,7 @@ function generateSitemap() {
     )
     .join("");
 
+  // 🗺️ Combine all into sitemap
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset 
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
@@ -63,6 +67,7 @@ ${staticUrls}
 ${blogUrls}
 </urlset>`;
 
+  // ✍️ Write sitemap to /public
   fs.writeFileSync("./public/sitemap.xml", sitemap);
   console.log("✅ Sitemap generated successfully!");
 }
