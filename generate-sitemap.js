@@ -31,25 +31,26 @@ try {
   console.error("⚠️ Could not read blogData.js file:", err);
 }
 
-// 🌍 Your live domain (change if needed)
+// 🌍 Your live domain
 const BASE_URL = "https://ajinkyainamdar.vercel.app";
 
 function generateSitemap() {
-  // ✅ Static pages
-  const staticPages = ["", "projects", "cv", "contact"];
+  // ✅ Static pages (added /blog main page)
+  const staticPages = ["", "projects", "cv", "contact", "blog"];
 
   const staticUrls = staticPages
-    .map(
-      (page) => `
+    .map((page) => {
+      const priority = page === "blog" ? "0.9" : "1.0";
+      return `
   <url>
     <loc>${BASE_URL}/${page}</loc>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>`
-    )
+    <priority>${priority}</priority>
+  </url>`;
+    })
     .join("");
 
-  // 📝 Blog pages
+  // 📝 Blog posts (dynamic)
   const blogUrls = blogPosts
     .map(
       (post) => `
@@ -77,4 +78,11 @@ ${blogUrls}
   console.log("✅ Sitemap generated successfully!");
 }
 
+// 🚀 Auto-regenerate sitemap whenever blogData.js changes
+fs.watchFile(blogDataPath, (curr, prev) => {
+  console.log("🔄 blogData.js changed — regenerating sitemap...");
+  generateSitemap();
+});
+
+// Initial generation
 generateSitemap();
