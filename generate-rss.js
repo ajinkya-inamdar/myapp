@@ -1,71 +1,61 @@
-// generate-rss.js
+// generate-sitemap-manual.js
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-// 💡 Define static and blog pages (same as sitemap)
-const staticPages = [
-  { loc: "", title: "Home" },
-  { loc: "projects", title: "Projects" },
-  { loc: "cv", title: "CV" },
-  { loc: "contact", title: "Contact" },
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const BASE_URL = "https://ajinkyainamdar.vercel.app";
+
+// Manually specify your blog posts here
+const MANUAL_BLOG_POSTS = [
+  // Add your posts like this:
+  // { id: "1", slug: "my-first-post", date: "2024-01-01" },
+  // { id: "2", slug: "another-post", date: "2024-01-02" },
 ];
 
-// 📝 Blog posts (same as in sitemap.js)
-const blogPosts = [
-  {
-    slug: "why-netflix-no-vacation-policy-works",
-    title: "Why Netflix’s No Vacation Policy Works",
-    date: "2025-06-12",
-  },
-  {
-    slug: "leadership-means-breaking-barriers",
-    title: "Leadership Means Breaking Barriers",
-    date: "2025-08-17",
-  },
-];
+function generateSitemap() {
+  const blogPosts = MANUAL_BLOG_POSTS;
+  
+  // Static pages
+  const staticPages = ["", "projects", "cv", "contact", "blog"];
+  const staticUrls = staticPages.map(page => {
+    const priority = page === "blog" ? "0.9" : "1.0";
+    const pathPart = page ? `/${page}` : "";
+    return `
+  <url>
+    <loc>${BASE_URL}${pathPart}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+  }).join("");
 
-// 🌍 Your live website domain
-const baseUrl = "https://ajinkyainamdar.vercel.app";
+  // Blog posts
+  const blogUrls = blogPosts.map(post => `
+  <url>
+    <loc>${BASE_URL}/blog/${post.slug}/${post.id}</loc>
+    <lastmod>${new Date(post.date).toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join("");
 
-// 🧱 Combine static and blog items
-const allPages = [
-  ...staticPages.map((page) => ({
-    url: `${baseUrl}/${page.loc}`,
-    title: page.title,
-    date: new Date().toISOString(),
-    description: `Visit ${page.title} page on Ajinkya Inamdar’s website.`,
-  })),
-  ...blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    title: post.title,
-    date: post.date,
-    description: `Read ${post.title} on Ajinkya Inamdar’s blog.`,
-  })),
-];
+  // Final sitemap
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${staticUrls}
+${blogUrls}
+</urlset>`;
 
-// 📰 Create RSS items
-const rssItems = allPages
-  .map(
-    (item) => `
-  <item>
-    <title>${item.title}</title>
-    <link>${item.url}</link>
-    <description>${item.description}</description>
-    <pubDate>${new Date(item.date).toUTCString()}</pubDate>
-  </item>`
-  )
-  .join("\n");
+  const outputPath = path.join(__dirname, "public", "sitemap.xml");
+  const publicDir = path.dirname(outputPath);
+  
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
+  }
+  
+  fs.writeFileSync(outputPath, sitemap);
+  console.log(`✅ Sitemap generated with ${blogPosts.length} manual blog posts!`);
+}
 
-// 🗞️ Complete RSS XML
-const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-<channel>
-  <title>Ajinkya Inamdar - Website Updates</title>
-  <link>${baseUrl}</link>
-  <description>Stay updated with new pages and blogs from Ajinkya Inamdar’s website.</description>
-  ${rssItems}
-</channel>
-</rss>`;
-
-// ✍️ Write RSS feed to /public folder
-fs.writeFileSync("./public/rss.xml", rssFeed, "utf8");
-console.log("✅ RSS feed (all pages + blogs) generated successfully!");
+generateSitemap();
