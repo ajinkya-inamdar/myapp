@@ -3,37 +3,41 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// ESM-friendly __dirname
+// Setup __dirname for ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ✅ Extract blog post data from blogData.js (ignoring image imports)
+// Path to your blog data
+const blogDataPath = path.join(__dirname, "src/data/blogData.js");
+
+// Extract blog info (id, slug, date) without importing images
 let blogPosts = [];
 try {
-  const blogDataText = fs.readFileSync(
-    path.join(__dirname, "src/data/blogData.js"),
-    "utf8"
-  );
+  const blogDataText = fs.readFileSync(blogDataPath, "utf8");
 
-  // Extract slugs and dates using regex
+  // Match id, slug, and date with regex
   const matches = [
     ...blogDataText.matchAll(
-      /slug:\s*['"`](.*?)['"`],[\s\S]*?date:\s*['"`](.*?)['"`]/g
+      /id:\s*['"`](.*?)['"`],[\s\S]*?slug:\s*['"`](.*?)['"`],[\s\S]*?date:\s*['"`](.*?)['"`]/g
     ),
   ];
-  blogPosts = matches.map(([_, slug, date]) => ({ slug, date }));
+
+  blogPosts = matches.map(([_, id, slug, date]) => ({
+    id,
+    slug,
+    date,
+  }));
 } catch (err) {
-  console.error("⚠️ Could not load blogData.js. Check path or format.", err);
+  console.error("⚠️ Could not read blogData.js file:", err);
 }
 
-// 🌍 Replace with your live domain (no trailing slash)
+// 🌍 Your live domain (change if needed)
 const BASE_URL = "https://ajinkyainamdar.vercel.app";
 
 function generateSitemap() {
-  // ✅ Add main pages and blog listing page
-  const staticPages = ["", "projects", "cv", "contact", "blog"];
+  // ✅ Static pages
+  const staticPages = ["", "projects", "cv", "contact"];
 
-  // 🧱 Generate URLs for static pages
   const staticUrls = staticPages
     .map(
       (page) => `
@@ -45,12 +49,12 @@ function generateSitemap() {
     )
     .join("");
 
-  // 📝 Generate URLs for each blog post
+  // 📝 Blog pages
   const blogUrls = blogPosts
     .map(
       (post) => `
   <url>
-    <loc>${BASE_URL}/blog/${post.slug}</loc>
+    <loc>${BASE_URL}/blog/${post.slug}/${post.id}</loc>
     <lastmod>${new Date(post.date).toISOString()}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -58,7 +62,7 @@ function generateSitemap() {
     )
     .join("");
 
-  // 🗺️ Combine all into sitemap
+  // 🗺️ Final sitemap XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset 
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
@@ -67,8 +71,9 @@ ${staticUrls}
 ${blogUrls}
 </urlset>`;
 
-  // ✍️ Write sitemap to /public
-  fs.writeFileSync("./public/sitemap.xml", sitemap);
+  // ✍️ Write sitemap.xml inside /public
+  const outputPath = path.join(__dirname, "public", "sitemap.xml");
+  fs.writeFileSync(outputPath, sitemap);
   console.log("✅ Sitemap generated successfully!");
 }
 

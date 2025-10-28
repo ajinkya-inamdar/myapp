@@ -17,7 +17,7 @@ const BlogCard = ({ blog }) => {
       </div>
 
       {/* Blog Content */}
-      <div className="p-4 pl-2"> {/* Adjusted padding-left for left alignment */}
+      <div className="p-4 pl-2">
         <h3 className="text-xl font-bold text-black mb-2">{blog.title}</h3>
         <p className="text-L text-gray-800 mb-1">Ajinkya Inamdar</p>
         <p className="text-sm text-gray-800 mb-2">{blog.date}</p>
@@ -26,12 +26,15 @@ const BlogCard = ({ blog }) => {
             ? blog.description
             : blog.content.replace(/<[^>]+>/g, "").substring(0, 120) + "..."}
         </p>
-        <Link
-          to={`/blog/${blog.id}`}
-          className="text-green-600 hover:underline font-medium"
-        >
-          Read More
-        </Link>
+
+        {/* 🔥 FIXED: Use slug for SEO-friendly URL */}
+<Link
+  to={`/blog/${blog.slug}/${blog.id}`}
+  className="text-green-600 hover:underline font-medium"
+>
+  Read More
+</Link>
+
       </div>
     </div>
   );

@@ -25,7 +25,8 @@ createRoot(document.getElementById('root')).render(
           <Route path="/contact" element={<Contact />} />
           <Route path="/work-experience" element={<WorkExperience />} />
           <Route path="/blog" element={<BlogList />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
+          {/* 🔥 FIX: Use slug instead of id */}
+          <Route path="/blog/:slug/:id" element={<BlogPost />} />
         </Routes>
         <Footer />
       </Router>
