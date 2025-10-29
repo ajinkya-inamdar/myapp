@@ -1,56 +1,62 @@
-// generate-sitemap.js
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
-// Setup __dirname for ESM
+// 🔧 Setup dirname (for ES Modules)
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Path to your blog data
-const blogDataPath = path.join(__dirname, "src/data/blogData.js");
-
-// Extract blog info (id, slug, date) without importing images
-let blogPosts = [];
-try {
-  const blogDataText = fs.readFileSync(blogDataPath, "utf8");
-
-  // Match id, slug, and date with regex
-  const matches = [
-    ...blogDataText.matchAll(
-      /id:\s*['"`](.*?)['"`],[\s\S]*?slug:\s*['"`](.*?)['"`],[\s\S]*?date:\s*['"`](.*?)['"`]/g
-    ),
-  ];
-
-  blogPosts = matches.map(([_, id, slug, date]) => ({
-    id,
-    slug,
-    date,
-  }));
-} catch (err) {
-  console.error("⚠️ Could not read blogData.js file:", err);
-}
-
-// 🌍 Your live domain
+// 🌍 Your live site URL
 const BASE_URL = "https://ajinkyainamdar.vercel.app";
 
-function generateSitemap() {
-  // ✅ Static pages (added /blog main page)
-  const staticPages = ["", "projects", "cv", "contact", "blog"];
+// 🗂 Path to your blog data file
+const blogDataPath = path.join(__dirname, "src", "data", "blogData.js");
 
+// 🧠 Function to safely parse blog data (no imports, just regex)
+function getBlogPosts() {
+  try {
+    const fileContent = fs.readFileSync(blogDataPath, "utf8");
+
+    // Capture id, slug, and date fields
+    const regex =
+      /id:\s*['"`]?(\d+)['"`]?.*?slug:\s*['"`]([^'"`]+)['"`].*?date:\s*['"`]([^'"`]+)['"`]/gs;
+
+    const posts = [];
+    let match;
+    while ((match = regex.exec(fileContent)) !== null) {
+      posts.push({
+        id: match[1],
+        slug: match[2],
+        date: match[3],
+      });
+    }
+
+    console.log(`📰 Found ${posts.length} blog posts`);
+    return posts;
+  } catch (err) {
+    console.error("❌ Error reading blogData.js:", err);
+    return [];
+  }
+}
+
+// 🧾 Function to generate sitemap content
+function generateSitemap() {
+  const blogPosts = getBlogPosts();
+
+  // Static site pages
+  const staticPages = ["", "projects", "cv", "contact", "blog"];
   const staticUrls = staticPages
-    .map((page) => {
-      const priority = page === "blog" ? "0.9" : "1.0";
-      return `
+    .map(
+      (page) => `
   <url>
     <loc>${BASE_URL}/${page}</loc>
     <changefreq>weekly</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
-    })
+    <priority>${page === "" ? "1.0" : "0.9"}</priority>
+  </url>`
+    )
     .join("");
 
-  // 📝 Blog posts (dynamic)
+  // Blog URLs
   const blogUrls = blogPosts
     .map(
       (post) => `
@@ -63,26 +69,25 @@ function generateSitemap() {
     )
     .join("");
 
-  // 🗺️ Final sitemap XML
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  // Full XML
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${staticUrls}
 ${blogUrls}
 </urlset>`;
 
-  // ✍️ Write sitemap.xml inside /public
-  const outputPath = path.join(__dirname, "public", "sitemap.xml");
-  fs.writeFileSync(outputPath, sitemap);
-  console.log("✅ Sitemap generated successfully!");
+  // Write to /public/sitemap.xml
+  const outputDir = path.join(__dirname, "public");
+  const outputFile = path.join(outputDir, "sitemap.xml");
+
+  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
+
+  fs.writeFileSync(outputFile, sitemapXml, "utf8");
+  console.log("✅ Sitemap successfully created at:", outputFile);
 }
 
-// 🚀 Auto-regenerate sitemap whenever blogData.js changes
-fs.watchFile(blogDataPath, (curr, prev) => {
-  console.log("🔄 blogData.js changed — regenerating sitemap...");
-  generateSitemap();
-});
-
-// Initial generation
+// 🚀 Run once and exit
 generateSitemap();
+process.exit(0);
