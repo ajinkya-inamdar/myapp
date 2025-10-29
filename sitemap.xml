@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
@@ -11,17 +11,17 @@
   <url>
     <loc>https://ajinkyainamdar.vercel.app/projects</loc>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ajinkyainamdar.vercel.app/cv</loc>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ajinkyainamdar.vercel.app/contact</loc>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ajinkyainamdar.vercel.app/blog</loc>
@@ -38,6 +38,12 @@
   <url>
     <loc>https://ajinkyainamdar.vercel.app/blog/leadership-means-breaking-barriers/2</loc>
     <lastmod>2025-08-16T18:30:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ajinkyainamdar.vercel.app/blog/the-day-ai-taught-me-a-lesson-about-being-human/3</loc>
+    <lastmod>2025-10-27T18:30:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

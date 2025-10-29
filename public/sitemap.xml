@@ -41,4 +41,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ajinkyainamdar.vercel.app/blog/the-day-ai-taught-me-a-lesson-about-being-human/3</loc>
+    <lastmod>2025-10-27T18:30:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
