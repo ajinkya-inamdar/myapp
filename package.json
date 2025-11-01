@@ -7,6 +7,9 @@
     "dev": "vite",
     "generate-sitemap": "node generate-sitemap.js",
     "build": "npm run generate-sitemap && vite build",
+    "sitemap:pages": "node generate-pages-sitemap.js",
+    "sitemap:blogs": "node generate-blogs-sitemap.js",
+    "sitemap:all": "npm run sitemap:pages && npm run sitemap:blogs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
