@@ -7,17 +7,17 @@ import aiHumanImg from '../assets/blogs/ai-human.png';
 export const blogPosts = [
   {
     id: '1',
-    slug: 'why-netflix-no-vacation-policy-works', // ✅ SEO-friendly slug
+    slug: 'why-netflix-no-vacation-policy-works',
     title: 'Why Netflix’s “No Vacation Policy” Works',
     date: 'June 12, 2025',
     category: 'Business and Management',
     author: {
       name: 'Ajinkya Inamdar',
-      bio: 'Ajinkya Inamdar is a business and longevity enthusiast who writes about leadership, innovation, and organizational culture. He believes in combining trust and high performance to build remarkable teams.'
+      bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.'
     },
     image: netflixVacationImg,
     description: 'Learn why Netflix’s no-vacation policy boosts trust, performance, and culture.',
-    keywords: 'Netflix, no vacation policy, HR, company culture, productivity',
+    keywords: 'Netflix, no vacation policy, HR, company culture, productivity, ajinkya inamdar',
     ogImage: 'https://yourwebsite.com/assets/blogs/netflix-vacation-og.jpg',
     meta: {
       title: 'Why Netflix’s “No Vacation Policy” Works | Ajinkya Inamdar Blog',
@@ -96,8 +96,8 @@ export const blogPosts = [
 
       <!-- ✅ Author Bio -->
       <div class="border-t border-gray-200 mt-8 pt-6">
-        <p class="font-semibold text-lg text-gray-800">Written by Ajinkya Inamdar</p>
-        <p class="text-sm text-gray-600 mt-1">Ajinkya Inamdar is a business and longevity enthusiast who writes about leadership, innovation, and organizational culture.</p>
+        <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
+        <p class="text-sm text-gray-600 mt-1">Ajinkya Inamdar is a business and longevity enthusiast who writes about leadership, innovation, and organizational culture. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.</p>
       </div>
     `
   },
@@ -110,12 +110,12 @@ export const blogPosts = [
   category: 'Business and Management',
   author: {
     name: 'Ajinkya Inamdar',
-    bio: 'Ajinkya Inamdar writes about leadership and human potential — exploring what separates managers from true leaders who drive transformation.'
+    bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.'
   },
   image: breakingBarriersImg,
   ogImage: breakingBarriersImg,
   description: 'Explore how true leadership is about ownership, advocacy, and transforming systems to achieve results beyond effort.',
-  keywords: 'leadership, management, ownership, advocacy, Breaking Barriers',
+  keywords: 'leadership, management, ownership, advocacy, Breaking Barriers, ajinkya inamdar',
   meta: {
     title: 'Leadership Means Breaking Barriers | Ajinkya Inamdar Blog',
     description: 'True leadership is about ownership, advocacy, and transforming systems to achieve more with less effort.',
@@ -160,11 +160,11 @@ export const blogPosts = [
       A manager sustains momentum. A leader redefines what’s possible.
     </p>
 
-    <!-- ✅ Author Bio -->
+    <!-- Author Bio -->
     <div class="border-t border-gray-200 mt-8 pt-6">
-      <p class="font-semibold text-lg text-gray-800">Written by Ajinkya Inamdar</p>
+      <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
       <p class="text-sm text-gray-600 mt-1">
-        Ajinkya Inamdar writes about leadership and human potential  exploring what separates managers from true leaders who drive transformation.
+        Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.
       </p>
     </div>
   `
@@ -179,14 +179,14 @@ export const blogPosts = [
   category: 'Technology',
   author: {
     name: 'Ajinkya Inamdar',
-    bio: 'Ajinkya Inamdar explores how technology and psychology intersect  sharing stories and lessons on how AI challenges what it means to stay human in the digital age.'
+    bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.'
   },
   image: aiHumanImg,
   ogImage: aiHumanImg,
   source: 'https://www.reddit.com/r/BaldursGate3/comments/1notd12/the_ai_surgeon_meme_sounded_all_to_familiar/',
   description:
     'A story about how a simple coding interaction with ChatGPT revealed a powerful truth about human judgment, fundamentals, and AI literacy.',
-  keywords: 'AI literacy, ChatGPT, machine learning, human oversight, artificial intelligence, coding, psychology, technology, prompt engineering',
+  keywords: 'AI literacy, ChatGPT, machine learning, human oversight, artificial intelligence, coding, psychology, technology, prompt engineering, ajinkya inamdar',
   meta: {
     title: 'The Day AI Taught Me a Lesson About Being Human | Ajinkya Inamdar Blog',
     description: 'How a small mistake by ChatGPT revealed the true importance of human judgment, fundamentals, and understanding AI in our modern world.',
@@ -271,10 +271,10 @@ export const blogPosts = [
       Because at the end of the day, AI won’t replace humans it’ll replace those who stopped learning.
     </p>
 
-    <!-- ✅ Author Bio -->
+    <!-- Author Bio -->
     <div class="border-t border-gray-200 mt-8 pt-6">
-      <p class="font-semibold text-lg text-gray-800">Written by Ajinkya Inamdar</p>
-      <p class="text-sm text-gray-600 mt-1">Ajinkya Inamdar explores how technology and psychology intersect — sharing stories and lessons on how AI challenges what it means to stay human in the digital age.</p>
+      <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
+      <p class="text-sm text-gray-600 mt-1">Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.</p>
     </div>
   `
 },
