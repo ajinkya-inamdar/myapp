@@ -5,10 +5,10 @@ import App from './App.jsx';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
+
 import CV from './pages/CV';
 import Contact from './pages/Contact';
-import WorkExperience from './pages/WorkExperience';
+
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import './index.css';
@@ -20,10 +20,10 @@ createRoot(document.getElementById('root')).render(
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+         
           <Route path="/cv" element={<CV />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/work-experience" element={<WorkExperience />} />
+          
           <Route path="/blog" element={<BlogList />} />
           {/* 🔥 FIX: Use slug instead of id */}
           <Route path="/blog/:slug/:id" element={<BlogPost />} />
