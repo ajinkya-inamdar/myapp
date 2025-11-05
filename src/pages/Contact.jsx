@@ -62,21 +62,37 @@ const Contact = () => {
                 <FaEnvelope /> ajinkyainamdar228@gmail.com
               </p>
 
-              <p className="text-black text-base sm:text-lg flex justify-center items-center gap-2">
-                <FaMapMarkerAlt /> Pune, Maharashtra, India
-              </p>
+              
             </div>
 
-            {/* Button */}
-            <div className="flex justify-center mt-2 mb-2">
-              <a 
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya," 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="border rounded text-black bg-white text-black px-4 py-2 sm:px-6 sm:py-3 rounded hover:bg-white hover:text-black transition text-center text-sm sm:text-base"
-              >
-                Get in Touch
-              </a>
+          {/* Button */}
+<div className="flex justify-center mt-2 mb-2">
+  <button
+    onClick={() => {
+      const email = "ajinkyainamdar228@gmail.com";
+      const subject = encodeURIComponent("Enquiry");
+      const body = encodeURIComponent("Hi Ajinkya,");
+
+      // Detect mobile device
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // Open Gmail or default mail app
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      } else {
+        // Open Gmail in web compose mode
+        window.open(
+          `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`,
+          "_blank"
+        );
+      }
+    }}
+    className="border rounded text-black bg-white px-4 py-2 sm:px-6 sm:py-3 hover:bg-gray-100 transition text-center text-sm sm:text-base"
+  >
+    Get in Touch
+  </button>
+
+
             </div>
           </div>
         </div>

@@ -74,14 +74,32 @@ const CV = () => {
         <div className="text-center mt-10 mb-10">
           <h2 className="text-5xl font-bold mb-6">Digital Portfolio</h2>
           <div className="flex justify-center items-center gap-4 mt-4">
-            <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 mb-1 inline-block bg-white border-2 border-grey px-6 py-3 rounded text-black hover:bg-gray-100 transition text-center text-base font-semibold shadow-sm"
-            >
-              Get in Touch
-            </a>
+  <button
+    onClick={() => {
+      const email = "ajinkyainamdar228@gmail.com";
+      const subject = encodeURIComponent("Enquiry");
+      const body = encodeURIComponent("Hi Ajinkya,");
+
+      // Detect if user is on a mobile device
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // Open the Gmail app or default mail app on mobile
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      } else {
+        // Open Gmail in web compose mode on desktop
+        window.open(
+          `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`,
+          "_blank"
+        );
+      }
+    }}
+    className="mt-4 mb-1 inline-block bg-white border-2 border-grey px-6 py-3 rounded text-black hover:bg-gray-100 transition text-center text-base font-semibold shadow-sm"
+  >
+    Get in Touch
+  </button>
+
+
             <a 
               href={cvFile} 
               download 
