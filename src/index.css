@@ -67,3 +67,216 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Search bar styles for blog content */
+.blog-content-container .search-input {
+  background: white !important;
+  color: #1f2937 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+/* Dark mode search styles */
+.blog-content-container.dark-mode .search-input {
+  background: #374151 !important;
+  color: #f9fafb !important;
+  border: 1px solid #4b5563 !important;
+}
+
+.blog-content-container.dark-mode .search-input::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Reading mode search styles */
+.blog-content-container.reading-mode .search-input {
+  background: #fff7dd !important;
+  color: #1b1b1b !important;
+  border: 1px solid #d1c4a0 !important;
+}
+
+.blog-content-container.reading-mode .search-input::placeholder {
+  color: #8b7d5e !important;
+}
+
+/* Search results dropdown styles */
+.blog-content-container .search-results-dropdown {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.blog-content-container.dark-mode .search-results-dropdown {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+.blog-content-container.reading-mode .search-results-dropdown {
+  background: #fffaf0;
+  border-color: #e7d6b0;
+  color: #1b1b1b;
+}
+
+/* Search result item styles */
+.search-result-item {
+  transition: background-color 0.2s ease;
+}
+
+.blog-content-container .search-result-item:hover {
+  background-color: #f9fafb;
+}
+
+.blog-content-container.dark-mode .search-result-item:hover {
+  background-color: #374151;
+}
+
+.blog-content-container.reading-mode .search-result-item:hover {
+  background-color: #fef3c7;
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+/* Ensure search dropdown appears above content */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+/* =========================
+   Blog CONTENT only theme scoping
+   Apply only to elements inside .blog-content-container
+   ========================= */
+
+/* DARK MODE - scoped to blog content only */
+.blog-content-container.dark-mode {
+  background-color: #0f172a !important;
+  color: #f3f4f6 !important;
+  transition: background-color 0.35s, color 0.35s;
+  min-height: 100vh;
+}
+
+/* Ensure all text elements inside dark mode blog content are readable */
+.blog-content-container.dark-mode h1,
+.blog-content-container.dark-mode h2,
+.blog-content-container.dark-mode h3,
+.blog-content-container.dark-mode h4,
+.blog-content-container.dark-mode h5,
+.blog-content-container.dark-mode h6,
+.blog-content-container.dark-mode p,
+.blog-content-container.dark-mode span,
+.blog-content-container.dark-mode div,
+.blog-content-container.dark-mode li,
+.blog-content-container.dark-mode strong,
+.blog-content-container.dark-mode em {
+  color: #f3f4f6 !important;
+}
+
+/* Dark mode specific adjustments for blog content */
+.blog-content-container.dark-mode .prose {
+  color: #f3f4f6 !important;
+}
+
+.blog-content-container.dark-mode .prose a {
+  color: #93c5fd !important;
+}
+
+.blog-content-container.dark-mode .prose code {
+  background-color: #1e293b !important;
+  color: #f3f4f6 !important;
+}
+
+.blog-content-container.dark-mode .prose blockquote {
+  border-left-color: #374151 !important;
+  color: #d1d5db !important;
+}
+
+/* READING MODE (Eye Comfort) - scoped to blog content only */
+.blog-content-container.reading-mode {
+  background-color: #fef7e5 !important;
+  color: #1b1b1b !important;
+  transition: background-color 0.35s, color 0.35s;
+  min-height: 100vh;
+}
+
+/* Ensure readable text contrast inside reading mode */
+.blog-content-container.reading-mode h1,
+.blog-content-container.reading-mode h2,
+.blog-content-container.reading-mode h3,
+.blog-content-container.reading-mode h4,
+.blog-content-container.reading-mode h5,
+.blog-content-container.reading-mode h6,
+.blog-content-container.reading-mode p,
+.blog-content-container.reading-mode span,
+.blog-content-container.reading-mode div,
+.blog-content-container.reading-mode li,
+.blog-content-container.reading-mode strong,
+.blog-content-container.reading-mode em {
+  color: #1b1b1b !important;
+}
+
+/* Reading mode specific adjustments */
+.blog-content-container.reading-mode .prose {
+  color: #1b1b1b !important;
+  background-color: transparent !important;
+}
+
+.blog-content-container.reading-mode .prose a {
+  color: #92400e !important;
+}
+
+.blog-content-container.reading-mode .prose code {
+  background-color: #fef3c7 !important;
+  color: #78350f !important;
+}
+
+.blog-content-container.reading-mode .prose blockquote {
+  border-left-color: #d97706 !important;
+  color: #78350f !important;
+  background-color: #fef3c7 !important;
+}
+
+/* Slightly brighten images in reading mode */
+.blog-content-container.reading-mode img {
+  filter: brightness(1.03) saturate(1.05);
+}
+
+/* Theme toggle button styles within blog content */
+.blog-content-container.dark-mode .bg-gray-100 {
+  background-color: #1e293b !important;
+}
+
+.blog-content-container.reading-mode .bg-gray-100 {
+  background-color: #fef3c7 !important;
+}
+
+/* Default mode - ensure it resets to normal */
+.blog-content-container.default-mode {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+/* Make sure the theme doesn't affect elements outside blog content container */
+body {
+  background-color: inherit;
+  color: inherit;
+}
+
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaXTwitter, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa6';
 import footerBg from '../assets/footer.jpg';
+import footerLogo from '../assets/logo.png'; // 🟢 Add your logo image here
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -21,7 +22,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative w-full text-white py-10 overflow-hidden">
+    <footer className="relative w-full  text-white py-1 overflow-hidden">
       {/* ===== Background Image ===== */}
       <div className="absolute inset-0">
         <img
@@ -37,26 +38,57 @@ const Footer = () => {
       {/* ===== Footer Content ===== */}
       <div className="relative z-10 container mx-auto px-6">
 
-        {/* Grid layout: contact left, menu center on desktop — stacked on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          
-          {/* ===== Left Column (Desktop: Contact | Mobile: Second) ===== */}
-          <div className="order-2 md:order-1 flex flex-col items-center md:items-start space-y-4">
-            <h2 className="text-xl font-semibold uppercase tracking-wide text-center md:text-left">
-              Contact
+        {/* ===== Grid layout ===== */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 md:gap-16 items-center">
+
+          {/* ===== Logo (Desktop only) ===== */}
+          <div className="hidden md:flex justify-start ml-40 text-left">
+            <img
+              src={footerLogo}
+              alt="Logo"
+              className="w-90 h-auto object-contain opacity-95 hover:opacity-100 transition transform hover:scale-105 duration-300"
+            />
+          </div>
+
+          {/* ===== Menu (Perfect Center, Left-aligned Text) ===== */}
+          <div className="order-1 md:order-2 flex flex-col space-y-2 text-5xl font-medium text-left md:text-left mx-auto items-start">
+            <h2 className="text-2xl font-semibold  tracking-wide text-center mt-10 md:text-left">
+              Menu
+            </h2>
+
+            <div className="flex flex-col space-y-1 text-2xl font-medium text-left">
+              <Link to="/" className="hover:text-gray-300 transition block">
+                About
+              </Link>
+              <Link to="/cv" className="hover:text-gray-300 transition block">
+                Portfolio
+              </Link>
+              <Link to="/blog" className="hover:text-gray-300 transition block">
+                Blogs
+              </Link>
+              <Link to="/contact" className="hover:text-gray-300 transition block">
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          {/* ===== Contact (Right side, Center aligned) ===== */}
+          <div className="order-2 md:order-3 flex flex-col items-center md:items-center text-center space-y-4">
+            <h2 className="text-xl font-semibold  tracking-wide">
+              Get in Touch
             </h2>
 
             {/* Email */}
             <button
               onClick={handleEmailClick}
-              className="flex items-center space-x-2 text-lg hover:text-gray-300 transition justify-start"
+              className="flex items-center space-x-2 text-lg hover:text-gray-300 transition justify-center"
             >
               <FaEnvelope />
               <span className="break-all">ajinkyainamdar228@gmail.com</span>
             </button>
 
             {/* Social Media */}
-            <div className="flex justify-start space-x-6 text-2xl mt-4">
+            <div className="flex justify-center space-x-6 text-2xl mt-4">
               <a
                 href="https://x.com/ajinkyainamdar_"
                 target="_blank"
@@ -84,28 +116,6 @@ const Footer = () => {
               >
                 <FaWhatsapp />
               </a>
-            </div>
-          </div>
-
-          {/* ===== Middle Column (Desktop: Menu Center | Mobile: First) ===== */}
-          <div className="order-1 md:order-2 flex flex-col items-center md:items-start space-y-4">
-            <h2 className="text-xl font-semibold uppercase tracking-wide text-center md:text-left">
-              Menu
-            </h2>
-
-            <div className="flex flex-col space-y-1 text-lg font-medium text-left">
-              <Link to="/" className="hover:text-gray-300 transition">
-                About
-              </Link>
-              <Link to="/cv" className="hover:text-gray-300 transition">
-                Portfolio
-              </Link>
-              <Link to="/blog" className="hover:text-gray-300 transition">
-                Blogs
-              </Link>
-              <Link to="/contact" className="hover:text-gray-300 transition">
-                Contact
-              </Link>
             </div>
           </div>
         </div>

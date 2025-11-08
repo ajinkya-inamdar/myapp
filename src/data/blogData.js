@@ -1,5 +1,7 @@
 // src/data/blogData.js
 
+
+
 import netflixVacationImg from '../assets/blogs/netflix-vacation.png';
 import breakingBarriersImg from '../assets/blogs/barriers.png';
 import aiHumanImg from '../assets/blogs/ai-human.png';
