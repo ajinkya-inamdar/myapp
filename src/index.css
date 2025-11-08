@@ -255,3 +255,88 @@ body {
   background-color: #fef3c7 !important;
 }
 
+/* Blog List Responsive Styles */
+@media (max-width: 1024px) {
+  .blog-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smooth transitions for category buttons */
+.category-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.category-button:hover {
+  transform: translateY(-1px);
+}
+
+/* Active category button styles */
+.category-button.active {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Blog List Dropdown Styles */
+.blog-dropdown {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* Smooth transitions */
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Scrollbar styling for dropdown */
+.blog-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blog-dropdown::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.blog-dropdown::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 3px;
+}
+
+.blog-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Focus states for accessibility */
+.blog-dropdown button:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .blog-dropdown {
+    max-height: 50vh;
+  }
+}
+
+/* Hover effects */
+.blog-dropdown-item:hover {
+  background-color: #f7fafc;
+  transform: translateX(2px);
+  transition: all 0.2s ease;
+}
+
+/* Active state for dropdown items */
+.blog-dropdown-item.active {
+  background-color: #ede9fe;
+  color: #7c3aed;
+  font-weight: 600;
+}
