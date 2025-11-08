@@ -65,11 +65,11 @@ const BlogPost = () => {
       {/* Add blog-content-container class to scope the theme ONLY to blog content */}
       <div className="blog-content-container">
         {/* Mode Toggle and Search Bar - Only visible on blog posts */}
-        <div className="max-w-3xl mx-auto mt-20 px-4 py-3 bg-gray-100 rounded-lg flex flex-col sm:flex-row justify-between items-center gap-4 sticky top-20 z-30 shadow-sm">
+        <div className=" border-3 border-black square-md shadow-md max-w-3xl mx-auto mt-20 px-4 py-3 bg-white rounded-lg flex flex-col sm:flex-row justify-between items-center gap-4 sticky top-20 z-30 shadow-sm">
           {/* Search Bar */}
-          <div className="relative w-full sm:w-64">
+          <div className="  relative w-full sm:w-64">
             <div className="relative">
-              <BsSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <BsSearch className="absolute  left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search other blogs..."
@@ -79,26 +79,28 @@ const BlogPost = () => {
               />
             </div>
             
-            {/* Search Results Dropdown */}
-            {showSearchResults && searchResults.length > 0 && (
-              <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-40 max-h-60 overflow-y-auto">
-                {searchResults.map((result) => (
-                  <button
-                    key={result.id}
-                    onClick={() => handleSearchSelect(result)}
-                    className="w-full text-left px-4 py-3 hover:bg-gray-100 border-b border-gray-100 last:border-b-0 transition-colors"
-                  >
-                    <div className="font-semibold text-gray-800">{result.title}</div>
-                    <div className="text-sm text-gray-600 mt-1">{result.category}</div>
-                    {result.description && (
-                      <div className="text-xs text-gray-500 mt-1 line-clamp-1">
-                        {result.description}
-                      </div>
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
+            
+{showSearchResults && searchResults.length > 0 && (
+  <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-md shadow-lg z-40 max-h-60 overflow-y-auto">
+    {searchResults.map((result) => (
+      <button
+        key={result.id}
+        onClick={() => handleSearchSelect(result)}
+        className="w-full text-left px-4 py-3 hover:bg-gray-100 border-b border-gray-100 last:border-b-0 transition-colors blog-search-result"
+      >
+        <div className="font-semibold text-gray-800 blog-search-title">{result.title}</div>
+        <div className="text-sm text-gray-600 mt-1 blog-search-category">{result.category}</div>
+        {result.description && (
+          <div className="text-xs text-gray-500 mt-1 line-clamp-1 blog-search-desc">
+            {result.description}
+          </div>
+        )}
+      </button>
+    ))}
+  </div>
+)}
+
+
             
             {/* No Results Message */}
             {showSearchResults && searchTerm.trim() !== "" && searchResults.length === 0 && (

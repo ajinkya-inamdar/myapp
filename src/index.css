@@ -68,97 +68,7 @@
   justify-content: center;
 }
 
-/* Search bar styles for blog content */
-.blog-content-container .search-input {
-  background: white !important;
-  color: #1f2937 !important;
-  border: 1px solid #d1d5db !important;
-}
 
-/* Dark mode search styles */
-.blog-content-container.dark-mode .search-input {
-  background: #374151 !important;
-  color: #f9fafb !important;
-  border: 1px solid #4b5563 !important;
-}
-
-.blog-content-container.dark-mode .search-input::placeholder {
-  color: #9ca3af !important;
-}
-
-/* Reading mode search styles */
-.blog-content-container.reading-mode .search-input {
-  background: #fff7dd !important;
-  color: #1b1b1b !important;
-  border: 1px solid #d1c4a0 !important;
-}
-
-.blog-content-container.reading-mode .search-input::placeholder {
-  color: #8b7d5e !important;
-}
-
-/* Search results dropdown styles */
-.blog-content-container .search-results-dropdown {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  z-index: 50;
-}
-
-.blog-content-container.dark-mode .search-results-dropdown {
-  background: #1f2937;
-  border-color: #374151;
-  color: #f9fafb;
-}
-
-.blog-content-container.reading-mode .search-results-dropdown {
-  background: #fffaf0;
-  border-color: #e7d6b0;
-  color: #1b1b1b;
-}
-
-/* Search result item styles */
-.search-result-item {
-  transition: background-color 0.2s ease;
-}
-
-.blog-content-container .search-result-item:hover {
-  background-color: #f9fafb;
-}
-
-.blog-content-container.dark-mode .search-result-item:hover {
-  background-color: #374151;
-}
-
-.blog-content-container.reading-mode .search-result-item:hover {
-  background-color: #fef3c7;
-}
-
-/* Line clamp utility for text truncation */
-.line-clamp-1 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-}
-
-/* Ensure search dropdown appears above content */
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.z-40 {
-  z-index: 40;
-}
-
-.z-50 {
-  z-index: 50;
-}
 
 /* =========================
    Blog CONTENT only theme scoping
@@ -278,5 +188,70 @@ body {
   background-color: inherit;
   color: inherit;
 }
+/* More specific CSS rules using the new class names */
 
+/* Fix search bar in dark mode */
+.blog-content-container.dark-mode input.search-input {
+  background: #374151 !important;
+  color: #ffffff !important;
+  border: 1px solid #4b5563 !important;
+}
+
+.blog-content-container.dark-mode input.search-input::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Fix search results in dark mode */
+.blog-content-container.dark-mode .absolute.bg-white {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.blog-content-container.dark-mode .blog-search-title {
+  color: #f9fafb !important;
+}
+
+.blog-content-container.dark-mode .blog-search-category {
+  color: #d1d5db !important;
+}
+
+.blog-content-container.dark-mode .blog-search-desc {
+  color: #9ca3af !important;
+}
+
+.blog-content-container.dark-mode .blog-search-result:hover {
+  background-color: #374151 !important;
+}
+
+/* Fix category badge in reading mode */
+.blog-content-container.reading-mode .blog-category-badge {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+.blog-content-container.reading-mode .blog-date {
+  color: #4b5563 !important;
+}
+
+/* Fix search results in reading mode */
+.blog-content-container.reading-mode .absolute.bg-white {
+  background: #fffaf0 !important;
+  border-color: #e7d6b0 !important;
+}
+
+.blog-content-container.reading-mode .blog-search-title {
+  color: #1b1b1b !important;
+}
+
+.blog-content-container.reading-mode .blog-search-category {
+  color: #4b5563 !important;
+}
+
+.blog-content-container.reading-mode .blog-search-desc {
+  color: #6b7280 !important;
+}
+
+.blog-content-container.reading-mode .blog-search-result:hover {
+  background-color: #fef3c7 !important;
+}
 

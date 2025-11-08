@@ -26,7 +26,7 @@ const BlogList = () => {
       <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Blog Posts</h1>
 
       {/* Search Bar Only - No Theme Toggle */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10 bg-white border-black px-6 py-4 rounded-lg shadow-sm">
+      <div className=" border-3 border-black square-md shadow-md flex flex-col md:flex-row justify-between items-center gap-4 mb-10 bg-white border-black px-6 py-4 rounded-lg shadow-sm">
         <input
           type="text"
           placeholder="Search blogs..."
