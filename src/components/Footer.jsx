@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative w-full  text-white py-1 overflow-hidden">
+    <footer className="relative w-full text-white py-6 overflow-hidden">
       {/* ===== Background Image ===== */}
       <div className="absolute inset-0">
         <img
@@ -39,24 +39,24 @@ const Footer = () => {
       <div className="relative z-10 container mx-auto px-6">
 
         {/* ===== Grid layout ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-center">
 
           {/* ===== Logo (Desktop only) ===== */}
-          <div className="hidden md:flex justify-start ml-40 text-left">
+          <div className="hidden md:flex justify-start ml-55 text-left">
             <img
               src={footerLogo}
               alt="Logo"
-              className="w-90 h-auto object-contain opacity-95 hover:opacity-100 transition transform hover:scale-105 duration-300"
+              className="w-80 h-auto object-contain opacity-95 hover:opacity-100 transition transform hover:scale-105 duration-300"
             />
           </div>
 
           {/* ===== Menu (Perfect Center, Left-aligned Text) ===== */}
-          <div className="order-1 md:order-2 flex flex-col space-y-2 text-5xl font-medium text-left md:text-left mx-auto items-start">
-            <h2 className="text-2xl font-semibold  tracking-wide text-center mt-10 md:text-left">
+          <div className="order-1 md:order-2 flex flex-col space-y-1 text-5xl font-medium text-left md:text-left mx-auto items-start">
+            <h2 className="text-xl font-semibold tracking-wide text-center mt-6 md:text-left">
               Menu
             </h2>
 
-            <div className="flex flex-col space-y-1 text-2xl font-medium text-left">
+            <div className="flex flex-col space-y-1 text-lg font-medium text-left">
               <Link to="/" className="hover:text-gray-300 transition block">
                 About
               </Link>
@@ -73,22 +73,22 @@ const Footer = () => {
           </div>
 
           {/* ===== Contact (Right side, Center aligned) ===== */}
-          <div className="order-2 md:order-3 flex flex-col items-center md:items-center text-center space-y-4">
-            <h2 className="text-xl font-semibold  tracking-wide">
+          <div className="order-2 md:order-3 flex flex-col items-center md:items-center text-center space-y-2">
+            <h2 className="text-lg font-semibold tracking-wide">
               Get in Touch
             </h2>
 
             {/* Email */}
             <button
               onClick={handleEmailClick}
-              className="flex items-center space-x-2 text-lg hover:text-gray-300 transition justify-center"
+              className="flex items-center space-x-2 text-base hover:text-gray-300 transition justify-center"
             >
               <FaEnvelope />
               <span className="break-all">ajinkyainamdar228@gmail.com</span>
             </button>
 
             {/* Social Media */}
-            <div className="flex justify-center space-x-6 text-2xl mt-4">
+            <div className="flex justify-center space-x-5 text-xl mt-2">
               <a
                 href="https://x.com/ajinkyainamdar_"
                 target="_blank"
@@ -121,10 +121,10 @@ const Footer = () => {
         </div>
 
         {/* ===== Divider Line ===== */}
-        <div className="border-t border-gray-500 mt-10 opacity-40"></div>
+        <div className="border-t border-gray-500 mt-6 opacity-40"></div>
 
         {/* ===== Bottom Line ===== */}
-        <div className="text-center text-sm text-gray-300 mt-6">
+        <div className="text-center text-xs text-gray-300 mt-4">
           © {new Date().getFullYear()} Ajinkya Inamdar. All rights reserved.
         </div>
       </div>

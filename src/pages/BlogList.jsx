@@ -26,16 +26,22 @@ const BlogList = () => {
     };
   }, []);
 
-  const filteredBlogs = blogPosts.filter((blog) => {
-    const matchesCategory = selectedCategory === "All" || blog.category === selectedCategory;
+  const filteredBlogs = blogPosts
+  .slice() // clone array so we don't mutate original
+  .sort((a, b) => b.id - a.id) // latest first
+  .filter((blog) => {
+    const matchesCategory =
+      selectedCategory === "All" || blog.category === selectedCategory;
     const q = searchTerm.toLowerCase();
     return (
       matchesCategory &&
       (blog.title.toLowerCase().includes(q) ||
         blog.category.toLowerCase().includes(q) ||
-        (blog.description && blog.description.toLowerCase().includes(q)))
+        (blog.description &&
+          blog.description.toLowerCase().includes(q)))
     );
   });
+
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);

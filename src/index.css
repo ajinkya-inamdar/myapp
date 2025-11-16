@@ -70,273 +70,72 @@
 
 
 
-/* =========================
-   Blog CONTENT only theme scoping
-   Apply only to elements inside .blog-content-container
-   ========================= */
-
-/* DARK MODE - scoped to blog content only */
-.blog-content-container.dark-mode {
-  background-color: #0f172a !important;
-  color: #f3f4f6 !important;
-  transition: background-color 0.35s, color 0.35s;
-  min-height: 100vh;
+/* Beautiful Global Theme Styles */
+.night-mode {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --accent-primary: #10b981;
+  --accent-hover: #059669;
+  --border-primary: #475569;
+  --border-secondary: #64748b;
 }
 
-/* Ensure all text elements inside dark mode blog content are readable */
-.blog-content-container.dark-mode h1,
-.blog-content-container.dark-mode h2,
-.blog-content-container.dark-mode h3,
-.blog-content-container.dark-mode h4,
-.blog-content-container.dark-mode h5,
-.blog-content-container.dark-mode h6,
-.blog-content-container.dark-mode p,
-.blog-content-container.dark-mode span,
-.blog-content-container.dark-mode div,
-.blog-content-container.dark-mode li,
-.blog-content-container.dark-mode strong,
-.blog-content-container.dark-mode em {
-  color: #f3f4f6 !important;
+.light-mode {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --accent-primary: #3b82f6;
+  --accent-hover: #2563eb;
+  --border-primary: #e2e8f0;
+  --border-secondary: #cbd5e1;
 }
 
-/* Dark mode specific adjustments for blog content */
-.blog-content-container.dark-mode .prose {
-  color: #f3f4f6 !important;
-}
-
-.blog-content-container.dark-mode .prose a {
-  color: #93c5fd !important;
-}
-
-.blog-content-container.dark-mode .prose code {
-  background-color: #1e293b !important;
-  color: #f3f4f6 !important;
-}
-
-.blog-content-container.dark-mode .prose blockquote {
-  border-left-color: #374151 !important;
-  color: #d1d5db !important;
-}
-
-/* READING MODE (Eye Comfort) - scoped to blog content only */
-.blog-content-container.reading-mode {
-  background-color: #fef7e5 !important;
-  color: #1b1b1b !important;
-  transition: background-color 0.35s, color 0.35s;
-  min-height: 100vh;
-}
-
-/* Ensure readable text contrast inside reading mode */
-.blog-content-container.reading-mode h1,
-.blog-content-container.reading-mode h2,
-.blog-content-container.reading-mode h3,
-.blog-content-container.reading-mode h4,
-.blog-content-container.reading-mode h5,
-.blog-content-container.reading-mode h6,
-.blog-content-container.reading-mode p,
-.blog-content-container.reading-mode span,
-.blog-content-container.reading-mode div,
-.blog-content-container.reading-mode li,
-.blog-content-container.reading-mode strong,
-.blog-content-container.reading-mode em {
-  color: #1b1b1b !important;
-}
-
-/* Reading mode specific adjustments */
-.blog-content-container.reading-mode .prose {
-  color: #1b1b1b !important;
-  background-color: transparent !important;
-}
-
-.blog-content-container.reading-mode .prose a {
-  color: #92400e !important;
-}
-
-.blog-content-container.reading-mode .prose code {
-  background-color: #fef3c7 !important;
-  color: #78350f !important;
-}
-
-.blog-content-container.reading-mode .prose blockquote {
-  border-left-color: #d97706 !important;
-  color: #78350f !important;
-  background-color: #fef3c7 !important;
-}
-
-/* Slightly brighten images in reading mode */
-.blog-content-container.reading-mode img {
-  filter: brightness(1.03) saturate(1.05);
-}
-
-/* Theme toggle button styles within blog content */
-.blog-content-container.dark-mode .bg-gray-100 {
-  background-color: #1e293b !important;
-}
-
-.blog-content-container.reading-mode .bg-gray-100 {
-  background-color: #fef3c7 !important;
-}
-
-/* Default mode - ensure it resets to normal */
-.blog-content-container.default-mode {
-  background-color: transparent !important;
-  color: inherit !important;
-}
-
-/* Make sure the theme doesn't affect elements outside blog content container */
+/* Apply beautiful gradients and smooth transitions */
 body {
-  background-color: inherit;
-  color: inherit;
-}
-/* More specific CSS rules using the new class names */
-
-/* Fix search bar in dark mode */
-.blog-content-container.dark-mode input.search-input {
-  background: #374151 !important;
-  color: #ffffff !important;
-  border: 1px solid #4b5563 !important;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 100vh;
 }
 
-.blog-content-container.dark-mode input.search-input::placeholder {
-  color: #9ca3af !important;
+/* Beautiful scrollbar */
+.night-mode ::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Fix search results in dark mode */
-.blog-content-container.dark-mode .absolute.bg-white {
-  background: #1f2937 !important;
-  border-color: #374151 !important;
+.night-mode ::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
 }
 
-.blog-content-container.dark-mode .blog-search-title {
-  color: #f9fafb !important;
+.night-mode ::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
 }
 
-.blog-content-container.dark-mode .blog-search-category {
-  color: #d1d5db !important;
+.light-mode ::-webkit-scrollbar {
+  width: 8px;
 }
 
-.blog-content-container.dark-mode .blog-search-desc {
-  color: #9ca3af !important;
+.light-mode ::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
 }
 
-.blog-content-container.dark-mode .blog-search-result:hover {
-  background-color: #374151 !important;
+.light-mode ::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
 }
 
-/* Fix category badge in reading mode */
-.blog-content-container.reading-mode .blog-category-badge {
-  background-color: #fef3c7 !important;
-  color: #92400e !important;
-}
-
-.blog-content-container.reading-mode .blog-date {
-  color: #4b5563 !important;
-}
-
-/* Fix search results in reading mode */
-.blog-content-container.reading-mode .absolute.bg-white {
-  background: #fffaf0 !important;
-  border-color: #e7d6b0 !important;
-}
-
-.blog-content-container.reading-mode .blog-search-title {
-  color: #1b1b1b !important;
-}
-
-.blog-content-container.reading-mode .blog-search-category {
-  color: #4b5563 !important;
-}
-
-.blog-content-container.reading-mode .blog-search-desc {
-  color: #6b7280 !important;
-}
-
-.blog-content-container.reading-mode .blog-search-result:hover {
-  background-color: #fef3c7 !important;
-}
-
-/* Blog List Responsive Styles */
-@media (max-width: 1024px) {
-  .blog-categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .blog-categories-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Smooth transitions for category buttons */
-.category-button {
-  transition: all 0.2s ease-in-out;
-}
-
-.category-button:hover {
-  transform: translateY(-1px);
-}
-
-/* Active category button styles */
-.category-button.active {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-/* Blog List Dropdown Styles */
-.blog-dropdown {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e5e7eb;
-}
-
-/* Smooth transitions */
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-/* Scrollbar styling for dropdown */
-.blog-dropdown::-webkit-scrollbar {
-  width: 6px;
-}
-
-.blog-dropdown::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 3px;
-}
-
-.blog-dropdown::-webkit-scrollbar-thumb {
-  background: #cbd5e0;
-  border-radius: 3px;
-}
-
-.blog-dropdown::-webkit-scrollbar-thumb:hover {
-  background: #a0aec0;
-}
-
-/* Focus states for accessibility */
-.blog-dropdown button:focus {
-  outline: 2px solid #8b5cf6;
+/* Focus styles */
+button:focus,
+a:focus {
+  outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 1024px) {
-  .blog-dropdown {
-    max-height: 50vh;
-  }
-}
-
-/* Hover effects */
-.blog-dropdown-item:hover {
-  background-color: #f7fafc;
-  transform: translateX(2px);
-  transition: all 0.2s ease;
-}
-
-/* Active state for dropdown items */
-.blog-dropdown-item.active {
-  background-color: #ede9fe;
-  color: #7c3aed;
-  font-weight: 600;
+  border-radius: 4px;
 }
