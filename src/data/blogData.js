@@ -264,7 +264,7 @@ export const blogPosts = [
   slug: 'science-backed-path-to-unstoppable-stamina',
   title: 'The Science Backed Path to Unstoppable Stamina',
   date: 'November 16, 2025',
-  category: 'Health & Fitness',
+  category: 'Health and Fitness',
   author: {
     name: 'Ajinkya Inamdar',
     bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.'
