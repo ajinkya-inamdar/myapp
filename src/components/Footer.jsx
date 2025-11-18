@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaXTwitter, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa6';
 import footerBg from '../assets/footer.jpg';
-import footerLogo from '../assets/logo.png'; // 🟢 Add your logo image here
+import footerLogo from '../assets/logo.png'; 
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -25,10 +25,16 @@ const Footer = () => {
     <footer className="relative w-full text-white py-6 overflow-hidden">
       {/* ===== Background Image ===== */}
       <div className="absolute inset-0">
+        {/* SPEED FIX: Lazy load footer background so it doesn't slow down initial page load */}
         <img
           src={footerBg}
           alt="Footer Background"
           className="w-full h-full object-cover opacity-80"
+          loading="lazy"        // Load only when visible
+          decoding="async"      // Decode off the main thread
+          fetchpriority="low"   // Lowest priority
+          width="1297"          // Explicit width to prevent shifts
+          height="1300"         // Explicit height
         />
       </div>
 
@@ -45,7 +51,8 @@ const Footer = () => {
           <div className="hidden md:flex justify-start ml-55 text-left">
             <img
               src={footerLogo}
-              alt="Logo"
+              alt="Ajinkya Inamdar Logo"
+              loading="lazy" // Lazy load the logo too
               className="w-80 h-auto object-contain opacity-95 hover:opacity-100 transition transform hover:scale-105 duration-300"
             />
           </div>
@@ -82,6 +89,7 @@ const Footer = () => {
             <button
               onClick={handleEmailClick}
               className="flex items-center space-x-2 text-base hover:text-gray-300 transition justify-center"
+              aria-label="Send email to Ajinkya Inamdar"
             >
               <FaEnvelope />
               <span className="break-all">ajinkyainamdar228@gmail.com</span>
@@ -94,7 +102,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition"
-                aria-label="Twitter / X"
+                aria-label="Twitter / X profile"
               >
                 <FaXTwitter />
               </a>
@@ -103,7 +111,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-300 transition"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn profile"
               >
                 <FaLinkedin />
               </a>

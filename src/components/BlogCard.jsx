@@ -8,7 +8,7 @@ const BlogCard = ({ blog }) => {
       
       {/* Image with Category Badge */}
       <div className="relative">
-        {/* SPEED FIX: Lazy load images that are not at the top of the page */}
+        {/* SPEED FIX: Lazy load images below the fold */}
         <img 
           src={blog.image} 
           alt={blog.title} 
@@ -35,13 +35,12 @@ const BlogCard = ({ blog }) => {
             : blog.content.replace(/<[^>]+>/g, "").substring(0, 120) + "..."}
         </p>
 
-        {/* ACCESSIBILITY FIX: Darker green (700) for contrast & descriptive aria-label */}
+        {/* ACCESSIBILITY SEO FIX: "Read More" is now descriptive for bots */}
         <Link
           to={`/blog/${blog.slug}/${blog.id}`}
           className="text-green-700 hover:underline font-medium"
-          aria-label={`Read more about ${blog.title}`} 
         >
-          Read More
+          Read More <span className="sr-only">about {blog.title}</span>
         </Link>
 
       </div>

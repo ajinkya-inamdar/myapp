@@ -1,11 +1,11 @@
 // src/data/blogData.js
 
-
-
-import netflixVacationImg from '../assets/blogs/netflix-vacation.png';
-import breakingBarriersImg from '../assets/blogs/barriers.png';
-import aiHumanImg from '../assets/blogs/ai-human.png';
-import staminaImg from '../assets/blogs/stamina-science.png';
+// SPEED FIX: Updated imports to .webp for faster loading
+// Make sure these files exist in src/assets/blogs/
+import netflixVacationImg from '../assets/blogs/netflix-vacation.webp';
+import breakingBarriersImg from '../assets/blogs/barriers.webp';
+import aiHumanImg from '../assets/blogs/ai-human.webp';
+import staminaImg from '../assets/blogs/stamina-science.webp';
 
 export const blogPosts = [
   {
@@ -16,12 +16,13 @@ export const blogPosts = [
     category: 'Business and Management',
     author: {
       name: 'Ajinkya Inamdar',
-      bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.'
+      bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions.'
     },
     image: netflixVacationImg,
     description: 'Learn why Netflix’s no-vacation policy boosts trust, performance, and culture.',
     keywords: 'Netflix, no vacation policy, HR, company culture, productivity, ajinkya inamdar',
-    ogImage: 'https://yourwebsite.com/assets/blogs/netflix-vacation-og.jpg',
+    // SEO FIX: Updated placeholder URL to your actual Vercel domain
+    ogImage: 'https://ajinkyainamdar.vercel.app/assets/blogs/netflix-vacation-og.jpg',
     meta: {
       title: 'Why Netflix’s “No Vacation Policy” Works | Ajinkya Inamdar Blog',
       description: 'How Netflix’s no-vacation policy builds trust, empowers employees, and enhances company culture.',
@@ -64,8 +65,8 @@ export const blogPosts = [
 
       <h3 class="text-2xl font-bold font-sans mt-6 mb-2 tracking-tight">Resources:</h3>
       <ul class="list-disc list-inside space-y-2 font-sans text-base">
-        <li><a href="https://lnkd.in/dyMniPmq" class="text-purple-600 underline font-medium hover:text-purple-800 transition-colors" target="_blank">LinkedIn Article 1</a></li>
-        <li><a href="https://lnkd.in/dK6iJ7Xs" class="text-purple-600 underline font-medium hover:text-purple-800 transition-colors" target="_blank">LinkedIn Article 2</a></li>
+        <li><a href="https://lnkd.in/dyMniPmq" class="text-green-700 underline font-medium hover:text-green-900 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn Article 1</a></li>
+        <li><a href="https://lnkd.in/dK6iJ7Xs" class="text-green-700 underline font-medium hover:text-green-900 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn Article 2</a></li>
       </ul>
 
       <h3 class="text-2xl font-bold font-sans mt-6 mb-2 tracking-tight">Why is it hard to apply this policy in India?</h3>
@@ -97,300 +98,290 @@ export const blogPosts = [
         Next question: how can we apply this in an organization with lower talent density?
       </p>
 
-      <!-- ✅ Author Bio -->
       <div class="border-t border-gray-200 mt-8 pt-6">
         <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
-        <p class="text-sm text-gray-600 mt-1">Ajinkya Inamdar is a business and longevity enthusiast who writes about leadership, innovation, and organizational culture. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.</p>
+        <p class="text-sm text-gray-600 mt-1">Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions.</p>
       </div>
     `
   },
 
-{
-  id: '2',
-  slug: 'leadership-means-breaking-barriers',
-  title: 'Leadership means "Breaking Barriers"',
-  date: 'August 17, 2025',
-  category: 'Business and Management',
-  author: {
-    name: 'Ajinkya Inamdar',
-    bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.'
+  {
+    id: '2',
+    slug: 'leadership-means-breaking-barriers',
+    title: 'Leadership means "Breaking Barriers"',
+    date: 'August 17, 2025',
+    category: 'Business and Management',
+    author: {
+      name: 'Ajinkya Inamdar',
+      bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology...'
+    },
+    image: breakingBarriersImg,
+    ogImage: breakingBarriersImg,
+    description: 'Explore how true leadership is about ownership, advocacy, and transforming systems to achieve results beyond effort.',
+    keywords: 'leadership, management, ownership, advocacy, Breaking Barriers, ajinkya inamdar',
+    meta: {
+      title: 'Leadership Means Breaking Barriers | Ajinkya Inamdar Blog',
+      description: 'True leadership is about ownership, advocacy, and transforming systems to achieve more with less effort.',
+      tags: ['Leadership', 'Management', 'Teamwork', 'Ownership']
+    },
+    content: `
+      <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">Beyond Effort: True Leadership is Ownership</h1>
+
+      <h3 class="text-2xl font-bold font-sans mt-6 mb-2 tracking-tight">Beyond Effort: True Leadership is Ownership</h3> 
+      <p class="font-sans text-base leading-relaxed mb-4"> Many people assume leadership is about how hard you work. Long hours, dedication, and persistence certainly matter but effort alone doesn’t equal great leadership. What truly sets leaders apart is <strong>ownership</strong>: fully embracing responsibility for the success of their team, the obstacles in their way, and the direction they’re headed. </p> 
+      <p class="font-sans text-base leading-relaxed mb-4"> Imagine a team working tirelessly but still falling short because the right tools or resources aren’t in place. As a manager, you might raise concerns, suggest improvements, or adapt within the boundaries given. That feels responsible and to an extent, it is. But here’s the catch: if the team doesn’t deliver, the world won’t ask about the lack of resources. They’ll want to know who was accountable. And accountability always lands at the leader’s desk. </p> 
+      <p class="font-sans text-base leading-relaxed mb-4"> Fair or not, leadership brings with it an expectation: not just to keep things running, but to challenge systems, raise your voice when something isn’t working, secure what your team truly needs, and fight for solutions even when it’s uncomfortable. Because in the end, leaders are judged not by how much effort they put in, but by the outcomes they enable. </p> 
+      <p class="mt-4 italic text-gray-600 font-serif text-base">A manager maintains the system they inherit. A leader transforms it.</p> 
+
+      <h3 class="text-2xl font-bold font-sans mt-8 mb-2 tracking-tight">The Two Faces of Leadership: Execution and Advocacy</h3> 
+      <p class="font-sans text-base leading-relaxed mb-4"> Leadership lives at the intersection of two demanding roles: <strong>execution</strong> and <strong>advocacy</strong>. </p> 
+      <p class="font-sans text-base leading-relaxed mb-4"> <strong>Execution</strong> is managing what’s in front of you coordinating tasks, aligning people, and hitting targets. It’s the craft of management. </p> 
+      <p class="font-sans text-base leading-relaxed mb-4"> <strong>Advocacy</strong> is where real leadership emerges challenging broken processes, pushing for better tools, and reshaping what’s possible for your team. </p> 
+      <p class="font-sans text-base leading-relaxed mb-4"> The shift is subtle but powerful. A manager says, “My team is struggling because we lack the right tools; I’ve raised the issue.” A leader says, “My team is struggling, so I’ll keep pushing for solutions, test alternatives, and frame the problem so clearly that ignoring it is no longer an option.” </p> 
+      <p class="font-sans text-base leading-relaxed mb-4"> Leadership isn’t about stubbornness it’s about sustained, strategic persistence. It’s about ensuring that obstacles aren’t excuses but challenges to be solved. </p> 
+
+      <ul class="list-disc list-inside space-y-2 font-sans text-base mb-4"> 
+        <li><strong>Being the voice of your team:</strong> observing their struggles, translating frustrations into data-backed needs, and presenting them with clarity and conviction.</li> 
+        <li><strong>Owning roadblocks:</strong> not just reporting problems but actively designing alternatives, lobbying for resources, or finding a way to move forward.</li> 
+        <li><strong>Building psychological safety:</strong> creating an environment where team members are unafraid to raise concerns because they know their voice contributes to collective problem-solving.</li> 
+      </ul> 
+
+      <p class="mt-4 italic text-gray-600 font-serif text-base">Managers manage what exists, leaders push boundaries to create what doesn’t yet.</p> 
+
+      <h3 class="text-2xl font-bold font-sans mt-8 mb-2 tracking-tight">The Discomfort That Defines Leadership</h3> 
+      <p class="font-sans text-base leading-relaxed mb-4"> The hardest parts of leadership are rarely the tasks they’re the uncomfortable conversations and the repeated requests that test your patience. Asking once is easy. Asking three or four times, even when ignored, is where your commitment is truly tested. </p> 
+      <p class="font-sans text-base leading-relaxed mb-4"> That persistence, that willingness to embrace discomfort, is what separates passive managers from transformative leaders. The best leaders don’t stop at doing what’s asked; they keep pressing until their team has what it needs to succeed. </p> 
+      <p class="font-sans text-base leading-relaxed mb-4"> At the end of the day, organizations notice the difference. Managers are measured by how well they carry out a plan. Leaders are remembered for how they reshape the path forward, creating conditions for their teams to achieve what once seemed out of reach. </p> 
+      <p class="mt-4 italic text-gray-600 font-serif text-base">A manager sustains momentum.</p> 
+      <p class="mt-2 italic text-gray-600 font-serif text-base">A leader redefines what’s possible.</p>
+
+      <div class="border-t border-gray-200 mt-8 pt-6">
+        <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
+        <p class="text-sm text-gray-600 mt-1">
+          Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions.
+        </p>
+      </div>
+    `
   },
-  image: breakingBarriersImg,
-  ogImage: breakingBarriersImg,
-  description: 'Explore how true leadership is about ownership, advocacy, and transforming systems to achieve results beyond effort.',
-  keywords: 'leadership, management, ownership, advocacy, Breaking Barriers, ajinkya inamdar',
-  meta: {
-    title: 'Leadership Means Breaking Barriers | Ajinkya Inamdar Blog',
-    description: 'True leadership is about ownership, advocacy, and transforming systems to achieve more with less effort.',
-    tags: ['Leadership', 'Management', 'Teamwork', 'Ownership']
+
+  {
+    id: '3',
+    slug: 'the-day-ai-taught-me-a-lesson-about-being-human',
+    title: 'The Day AI Taught Me a Lesson About Being Human',
+    date: 'October 28, 2025',
+    category: 'Technology',
+    author: {
+      name: 'Ajinkya Inamdar',
+      bio: 'Ajinkya Inamdar is an engineering graduate...'
+    },
+    image: aiHumanImg,
+    ogImage: aiHumanImg,
+    source: 'https://www.reddit.com/r/BaldursGate3/comments/1notd12/the_ai_surgeon_meme_sounded_all_to_familiar/',
+    description: 'A story about how a simple coding interaction with ChatGPT revealed a powerful truth about human judgment, fundamentals, and AI literacy.',
+    keywords: 'AI literacy, ChatGPT, machine learning, human oversight, artificial intelligence, coding, psychology, technology, prompt engineering, ajinkya inamdar',
+    meta: {
+      title: 'The Day AI Taught Me a Lesson About Being Human | Ajinkya Inamdar Blog',
+      description: 'How a small mistake by ChatGPT revealed the true importance of human judgment, fundamentals, and understanding AI in our modern world.',
+      tags: ['AI', 'Human Oversight', 'Machine Learning', 'Technology', 'Prompt Engineering']
+    },
+    content: `
+      <h1 class="text-3xl font-extrabold font-sans mb-6 tracking-tight">The Day AI Taught Me a Lesson About Being Human</h1>
+      
+      <p>A few days ago, I stumbled upon a meme that made think something important.</p>
+
+      <p>But that meme hit me differently because I had just lived that exact experience in the middle of a coding session with ChatGPT. I was working on a machine learning project. I asked ChatGPT for help with an error, and it added a random line that had absolutely nothing to do with what I was asking. It didn’t break my output. It didn’t throw an error. Like that one project partner who contributes absolutely nothing in a group project. I pointed it out to ChatGPT and guess what I got in response?</p>
+
+      <p>“Hawk-eyed! You’re right. Let me change it.”</p>
+
+      <p>I sat there, sipping my coffee, staring at my screen thinking “So this is what “artificial” intelligence looks like?” Now, don’t get me wrong on AI, it is incredible. It has saved me hours of debugging, helped me brainstorm code logic, and even taught me better ways to structure my functions. But that small, seemingly harmless line of code made me realize something much bigger.</p>
+
+      <p><strong>What if a tiny error becomes a big problem?</strong></p>
+
+      <p>In the coding world, a random line of useless code might not always cause harm. Sometimes, it just slows things down or makes your code look messy. But in the real world, where AI is being used to diagnose diseases, manage finances, or control self-driving cars, even a “tiny mistake” could have massive consequences. The scary part? AI won’t feel bad about it. It won’t lose sleep. It won’t second-guess itself. It’ll just move on by learning for its mistake, but the mistakes can cause a permanent harm. That’s when it hit me: the only reason I spotted that mistake was because I knew the fundamentals. My “hawk-eyed” brilliance, as ChatGPT so charmingly called it, it wasn’t something genius, it was experience and this is where most people get it wrong about AI. We expect it to think for us, instead of with us.</p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-3">Why Understanding the Domain Still Matters (Maybe More Than Ever)</h3>
+
+      <p>Let’s be honest, AI is like that business consultant who insists they know the answer to everything. They will tell you with so much confidence that you’ll start to doubt yourself, even when you’re right. If you don’t understand the domain, whether it’s coding, finance, medicine, or marketing you will have no way to tell if AI’s answer is right or completely off track. That’s the danger zone. AI is trained on patterns. It doesn’t truly “understand” context, nuance, or consequences not yet anyway. So, if you blindly rely on it without having the basic knowledge of your field, you’re basically handing over the steering wheel to someone who’s never learned to drive but has read every driving manual in the world and that never ends well, unless you are Max Verstappen.</p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-3">AI won’t replace you, but someone who knows how to use it might</h3>
+
+      <p>Here’s the part that everyone loves to debate:</p>
+
+      <p>“Will AI replace humans?” Short answer? No. Long answer? It depends on how you use it.</p>
+
+      <p>AI won’t replace a great coder, but a mediocre coder who knows how to use AI efficiently might just replace a great one who refuses to adapt. The same goes for designers, marketers, writers, and practically every profession in their specific domain.</p>
+
+      <p>The truth is AI is a tool, not a replacement. It’s meant to improve what you already know and teach you what you are missing. The implementation is your work, at least in the world of coding but if you don’t have the basics down, AI can’t save you. It will just confuse you later in your work when the process becomes complicated, that’s where the basics kick in.</p>
+
+      <p><strong>Master the basics, then let AI improve and make you faster and creative.</strong></p>
+
+      <p>Think of AI as a turbocharger. It can make you go faster, but only if you already know how to drive. Without fundamentals, that “speed” is just chaos. When you understand the basics of your craft, the principles, the process behind it and what you do, then AI becomes your work buddy, not your boss. You start spotting mistakes faster. You start using prompts that make sense and most importantly, you start thinking critically about what AI gives you.</p>
+
+      <p>The irony is that AI makes the fundamentals even more valuable than before. Because now, knowing your stuff doesn’t just make you good at your job it makes you capable of using AI the right way.</p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-3">The New Skill Everyone Needs: AI Literacy</h3>
+
+      <p>We talk about digital literacy, financial literacy, emotional intelligence, but there’s a new kind of literacy that’s becoming just as important AI literacy or prompt engineering- a skill that makes you rich (of course kidding).</p>
+
+      <p>AI literacy isn’t about learning how to code your own AI model (unless that’s your field). It’s about understanding how AI works, where it gets its information, and what its limitations are. When you understand that, you stop being a passive user. You become an active collaborator.</p>
+
+      <p>Collaboration- that’s where the magic happens.</p>
+
+      <p>So, if you’re worried about being “replaced by AI,” don’t be. Be worried about being replaced by the person who knows how to use it better than you. After that coding incident, I didn’t just fix my code I fixed my mindset. I stopped thinking of AI as a genius that knows everything. Instead, I started treating it like a smart intern fast, eager, but still needs supervision. The best part? AI makes learning fun again. You can experiment more, make mistakes faster, and get instant feedback. But it’s you're understanding that makes those experiments meaningful.</p>
+
+      <p>Every bug AI fixes,</p>
+      <p>Every logic AI figures out,</p>
+      <p>Every small detail AI notice, I will be watching it.</p>
+
+      <p>I hope Sting doesn’t charge me million dollars for this copyright.</p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-3">Final Thoughts: The Human in the Loop</h3>
+
+      <p>AI will continue to evolve. It’ll get better, faster, more capable maybe even human like. But no matter how advanced it becomes, there’s one thing it will never fully replace: human judgment. AI can process data, but it can’t understand meaning. It can mimic emotion, but it can’t feel responsibility, and it can generate answers, but it can’t question its own output. That’s our job.</p>
+
+      <p>So, the next time AI gives you a random line of code or an oddly confident answer, smile, take a sip of coffee, and remind yourself you’re still the caption of the ship because at the end of the day, AI won’t replace humans. It’ll only replace those who stopped learning. So, grab that coffee, sharpen your fundamentals, and keep your hawk eyes open.</p>
+
+      <p><strong>The future belongs to those who stay curious.</strong></p>
+
+      <div class="border-t border-gray-200 mt-8 pt-6">
+        <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
+        <p class="text-sm text-gray-600 mt-1">Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions.</p>
+      </div>
+    `
   },
-  content: `
-    <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">Beyond Effort: True Leadership is Ownership</h1>
 
-<h3 class="text-2xl font-bold font-sans mt-6 mb-2 tracking-tight">Beyond Effort: True Leadership is Ownership</h3> 
-<p class="font-sans text-base leading-relaxed mb-4"> Many people assume leadership is about how hard you work. Long hours, dedication, and persistence certainly matter but effort alone doesn’t equal great leadership. What truly sets leaders apart is <strong>ownership</strong>: fully embracing responsibility for the success of their team, the obstacles in their way, and the direction they’re headed. </p> 
-<p class="font-sans text-base leading-relaxed mb-4"> Imagine a team working tirelessly but still falling short because the right tools or resources aren’t in place. As a manager, you might raise concerns, suggest improvements, or adapt within the boundaries given. That feels responsible and to an extent, it is. But here’s the catch: if the team doesn’t deliver, the world won’t ask about the lack of resources. They’ll want to know who was accountable. And accountability always lands at the leader’s desk. </p> 
-<p class="font-sans text-base leading-relaxed mb-4"> Fair or not, leadership brings with it an expectation: not just to keep things running, but to challenge systems, raise your voice when something isn’t working, secure what your team truly needs, and fight for solutions even when it’s uncomfortable. Because in the end, leaders are judged not by how much effort they put in, but by the outcomes they enable. </p> 
-<p class="mt-4 italic text-gray-600 font-serif text-base">A manager maintains the system they inherit. A leader transforms it.</p> 
+  {
+    id: '4',
+    slug: 'science-backed-path-to-unstoppable-stamina',
+    title: 'The Science Backed Path to Unstoppable Stamina',
+    date: 'November 16, 2025',
+    category: 'Health and Fitness',
+    author: {
+      name: 'Ajinkya Inamdar',
+      bio: 'Ajinkya Inamdar is an engineering graduate...'
+    },
+    image: staminaImg,
+    description: 'The 5 most powerful science-backed training methods to build unstoppable stamina.',
+    keywords: 'stamina, endurance, HIIT, stamina training, fitness, exercise science, Ajinkya Inamdar',
+    // SEO FIX: Use real URL for OG Image
+    ogImage: 'https://ajinkyainamdar.vercel.app/assets/blogs/stamina-science-og.jpg',
+    meta: {
+      title: 'The Science Backed Path to Unstoppable Stamina | Ajinkya Inamdar Blog',
+      description: 'Discover how to boost endurance scientifically with the five best types of stamina training.',
+      tags: ['Stamina', 'Endurance', 'Fitness Science']
+    },
+    content: `
+      <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">The Science Backed Path to Unstoppable Stamina</h1>
 
-<h3 class="text-2xl font-bold font-sans mt-8 mb-2 tracking-tight">The Two Faces of Leadership: Execution and Advocacy</h3> 
-<p class="font-sans text-base leading-relaxed mb-4"> Leadership lives at the intersection of two demanding roles: <strong>execution</strong> and <strong>advocacy</strong>. </p> 
-<p class="font-sans text-base leading-relaxed mb-4"> <strong>Execution</strong> is managing what’s in front of you coordinating tasks, aligning people, and hitting targets. It’s the craft of management. </p> 
-<p class="font-sans text-base leading-relaxed mb-4"> <strong>Advocacy</strong> is where real leadership emerges challenging broken processes, pushing for better tools, and reshaping what’s possible for your team. </p> 
-<p class="font-sans text-base leading-relaxed mb-4"> The shift is subtle but powerful. A manager says, “My team is struggling because we lack the right tools; I’ve raised the issue.” A leader says, “My team is struggling, so I’ll keep pushing for solutions, test alternatives, and frame the problem so clearly that ignoring it is no longer an option.” </p> 
-<p class="font-sans text-base leading-relaxed mb-4"> Leadership isn’t about stubbornness it’s about sustained, strategic persistence. It’s about ensuring that obstacles aren’t excuses but challenges to be solved. </p> 
-
-<ul class="list-disc list-inside space-y-2 font-sans text-base mb-4"> 
-  <li><strong>Being the voice of your team:</strong> observing their struggles, translating frustrations into data-backed needs, and presenting them with clarity and conviction.</li> 
-  <li><strong>Owning roadblocks:</strong> not just reporting problems but actively designing alternatives, lobbying for resources, or finding a way to move forward.</li> 
-  <li><strong>Building psychological safety:</strong> creating an environment where team members are unafraid to raise concerns because they know their voice contributes to collective problem-solving.</li> 
-</ul> 
-
-<p class="mt-4 italic text-gray-600 font-serif text-base">Managers manage what exists, leaders push boundaries to create what doesn’t yet.</p> 
-
-<h3 class="text-2xl font-bold font-sans mt-8 mb-2 tracking-tight">The Discomfort That Defines Leadership</h3> 
-<p class="font-sans text-base leading-relaxed mb-4"> The hardest parts of leadership are rarely the tasks they’re the uncomfortable conversations and the repeated requests that test your patience. Asking once is easy. Asking three or four times, even when ignored, is where your commitment is truly tested. </p> 
-<p class="font-sans text-base leading-relaxed mb-4"> That persistence, that willingness to embrace discomfort, is what separates passive managers from transformative leaders. The best leaders don’t stop at doing what’s asked; they keep pressing until their team has what it needs to succeed. </p> 
-<p class="font-sans text-base leading-relaxed mb-4"> At the end of the day, organizations notice the difference. Managers are measured by how well they carry out a plan. Leaders are remembered for how they reshape the path forward, creating conditions for their teams to achieve what once seemed out of reach. </p> 
-<p class="mt-4 italic text-gray-600 font-serif text-base">A manager sustains momentum.</p> 
-<p class="mt-2 italic text-gray-600 font-serif text-base">A leader redefines what’s possible.</p>
-
-
-    <!-- Author Bio -->
-    <div class="border-t border-gray-200 mt-8 pt-6">
-      <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
-      <p class="text-sm text-gray-600 mt-1">
-        Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.
+      <p class="font-sans text-base leading-relaxed mb-4">
+        Stamina is the quiet power that helps you keep going long after others would have stopped. It is not just about feeling energetic for a moment. It is the deep fuel that allows you to perform at your best again and again. Whether you are running a race, performing on a stage, playing a sport, or simply moving through a busy workday, stamina is what strengthens you to endure without falling apart.
       </p>
-    </div>
-  `
-},
 
-
-{
-  id: '3',
-  slug: 'the-day-ai-taught-me-a-lesson-about-being-human',
-  title: 'The Day AI Taught Me a Lesson About Being Human',
-  date: 'October 28, 2025',
-  category: 'Technology',
-  author: {
-    name: 'Ajinkya Inamdar',
-    bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.'
-  },
-  image: aiHumanImg,
-  ogImage: aiHumanImg,
-  source: 'https://www.reddit.com/r/BaldursGate3/comments/1notd12/the_ai_surgeon_meme_sounded_all_to_familiar/',
-  description:
-    'A story about how a simple coding interaction with ChatGPT revealed a powerful truth about human judgment, fundamentals, and AI literacy.',
-  keywords: 'AI literacy, ChatGPT, machine learning, human oversight, artificial intelligence, coding, psychology, technology, prompt engineering, ajinkya inamdar',
-  meta: {
-    title: 'The Day AI Taught Me a Lesson About Being Human | Ajinkya Inamdar Blog',
-    description: 'How a small mistake by ChatGPT revealed the true importance of human judgment, fundamentals, and understanding AI in our modern world.',
-    tags: ['AI', 'Human Oversight', 'Machine Learning', 'Technology', 'Prompt Engineering']
-  },
-  content: `
-   <h1 class="text-3xl font-extrabold font-sans mb-6 tracking-tight">The Day AI Taught Me a Lesson About Being Human</h1>
-
-<p>A few days ago, I stumbled upon a meme that made think something important.</p>
-
-<p>But that meme hit me differently because I had just lived that exact experience in the middle of a coding session with ChatGPT. I was working on a machine learning project. I asked ChatGPT for help with an error, and it added a random line that had absolutely nothing to do with what I was asking. It didn’t break my output. It didn’t throw an error. Like that one project partner who contributes absolutely nothing in a group project. I pointed it out to ChatGPT and guess what I got in response?</p>
-
-<p>“Hawk-eyed! You’re right. Let me change it.”</p>
-
-<p>I sat there, sipping my coffee, staring at my screen thinking “So this is what “artificial” intelligence looks like?” Now, don’t get me wrong on AI, it is incredible. It has saved me hours of debugging, helped me brainstorm code logic, and even taught me better ways to structure my functions. But that small, seemingly harmless line of code made me realize something much bigger.</p>
-
-<p><strong>What if a tiny error becomes a big problem?</strong></p>
-
-<p>In the coding world, a random line of useless code might not always cause harm. Sometimes, it just slows things down or makes your code look messy. But in the real world, where AI is being used to diagnose diseases, manage finances, or control self-driving cars, even a “tiny mistake” could have massive consequences. The scary part? AI won’t feel bad about it. It won’t lose sleep. It won’t second-guess itself. It’ll just move on by learning for its mistake, but the mistakes can cause a permanent harm. That’s when it hit me: the only reason I spotted that mistake was because I knew the fundamentals. My “hawk-eyed” brilliance, as ChatGPT so charmingly called it, it wasn’t something genius, it was experience and this is where most people get it wrong about AI. We expect it to think for us, instead of with us.</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-3">Why Understanding the Domain Still Matters (Maybe More Than Ever)</h3>
-
-<p>Let’s be honest, AI is like that business consultant who insists they know the answer to everything. They will tell you with so much confidence that you’ll start to doubt yourself, even when you’re right. If you don’t understand the domain, whether it’s coding, finance, medicine, or marketing you will have no way to tell if AI’s answer is right or completely off track. That’s the danger zone. AI is trained on patterns. It doesn’t truly “understand” context, nuance, or consequences not yet anyway. So, if you blindly rely on it without having the basic knowledge of your field, you’re basically handing over the steering wheel to someone who’s never learned to drive but has read every driving manual in the world and that never ends well, unless you are Max Verstappen.</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-3">AI won’t replace you, but someone who knows how to use it might</h3>
-
-<p>Here’s the part that everyone loves to debate:</p>
-
-<p>“Will AI replace humans?” Short answer? No. Long answer? It depends on how you use it.</p>
-
-<p>AI won’t replace a great coder, but a mediocre coder who knows how to use AI efficiently might just replace a great one who refuses to adapt. The same goes for designers, marketers, writers, and practically every profession in their specific domain.</p>
-
-<p>The truth is AI is a tool, not a replacement. It’s meant to improve what you already know and teach you what you are missing. The implementation is your work, at least in the world of coding but if you don’t have the basics down, AI can’t save you. It will just confuse you later in your work when the process becomes complicated, that’s where the basics kick in.</p>
-
-<p><strong>Master the basics, then let AI improve and make you faster and creative.</strong></p>
-
-<p>Think of AI as a turbocharger. It can make you go faster, but only if you already know how to drive. Without fundamentals, that “speed” is just chaos. When you understand the basics of your craft, the principles, the process behind it and what you do, then AI becomes your work buddy, not your boss. You start spotting mistakes faster. You start using prompts that make sense and most importantly, you start thinking critically about what AI gives you.</p>
-
-<p>The irony is that AI makes the fundamentals even more valuable than before. Because now, knowing your stuff doesn’t just make you good at your job it makes you capable of using AI the right way.</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-3">The New Skill Everyone Needs: AI Literacy</h3>
-
-<p>We talk about digital literacy, financial literacy, emotional intelligence, but there’s a new kind of literacy that’s becoming just as important AI literacy or prompt engineering- a skill that makes you rich (of course kidding).</p>
-
-<p>AI literacy isn’t about learning how to code your own AI model (unless that’s your field). It’s about understanding how AI works, where it gets its information, and what its limitations are. When you understand that, you stop being a passive user. You become an active collaborator.</p>
-
-<p>Collaboration- that’s where the magic happens.</p>
-
-<p>So, if you’re worried about being “replaced by AI,” don’t be. Be worried about being replaced by the person who knows how to use it better than you. After that coding incident, I didn’t just fix my code I fixed my mindset. I stopped thinking of AI as a genius that knows everything. Instead, I started treating it like a smart intern fast, eager, but still needs supervision. The best part? AI makes learning fun again. You can experiment more, make mistakes faster, and get instant feedback. But it’s you're understanding that makes those experiments meaningful.</p>
-
-<p>Every bug AI fixes,</p>
-<p>Every logic AI figures out,</p>
-<p>Every small detail AI notice, I will be watching it.</p>
-
-<p>I hope Sting doesn’t charge me million dollars for this copyright.</p>
-
-<h3 class="text-2xl font-bold mt-8 mb-3">Final Thoughts: The Human in the Loop</h3>
-
-<p>AI will continue to evolve. It’ll get better, faster, more capable maybe even human like. But no matter how advanced it becomes, there’s one thing it will never fully replace: human judgment. AI can process data, but it can’t understand meaning. It can mimic emotion, but it can’t feel responsibility, and it can generate answers, but it can’t question its own output. That’s our job.</p>
-
-<p>So, the next time AI gives you a random line of code or an oddly confident answer, smile, take a sip of coffee, and remind yourself you’re still the caption of the ship because at the end of the day, AI won’t replace humans. It’ll only replace those who stopped learning. So, grab that coffee, sharpen your fundamentals, and keep your hawk eyes open.</p>
-
-<p><strong>The future belongs to those who stay curious.</strong></p>
-
-
-
-    <!-- Author Bio -->
-    <div class="border-t border-gray-200 mt-8 pt-6">
-      <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
-      <p class="text-sm text-gray-600 mt-1">Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.</p>
-    </div>
-  `
-},
-
-
-
-{
-  id: '4',
-  slug: 'science-backed-path-to-unstoppable-stamina',
-  title: 'The Science Backed Path to Unstoppable Stamina',
-  date: 'November 16, 2025',
-  category: 'Health and Fitness',
-  author: {
-    name: 'Ajinkya Inamdar',
-    bio: 'Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.'
-  },
-  image: staminaImg,
-  description: 'The 5 most powerful science-backed training methods to build unstoppable stamina.',
-  keywords: 'stamina, endurance, HIIT, stamina training, fitness, exercise science, Ajinkya Inamdar',
-  ogImage: 'https://yourwebsite.com/assets/blogs/stamina-science-og.jpg',
-  meta: {
-    title: 'The Science Backed Path to Unstoppable Stamina | Ajinkya Inamdar Blog',
-    description: 'Discover how to boost endurance scientifically with the five best types of stamina training.',
-    tags: ['Stamina', 'Endurance', 'Fitness Science']
-  },
-  content: `
-    <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">The Science Backed Path to Unstoppable Stamina</h1>
-
-    <p class="font-sans text-base leading-relaxed mb-4">
-      Stamina is the quiet power that helps you keep going long after others would have stopped. It is not just about feeling energetic for a moment. It is the deep fuel that allows you to perform at your best again and again. Whether you are running a race, performing on a stage, playing a sport, or simply moving through a busy workday, stamina is what strengthens you to endure without falling apart.
-    </p>
-
-    <p class="font-sans text-base leading-relaxed mb-4">
-      People often confuse stamina with motivation or excitement. But excitement disappears quickly. True stamina lives inside your body. It depends on how strong your heart is, how smoothly your lungs deliver oxygen, and how long your muscles can resist fatigue. If any one of these systems gives up, your performance drops. If all of them are trained correctly, you start feeling unstoppable.
-    </p>
-
-    <p class="font-sans text-base leading-relaxed mb-4">
-      The best part is this. You do not need fancy machines or the latest fitness trends to improve stamina. Sports science has spent decades studying athletes and everyday exercisers to find the most effective ways to build endurance. There are five top training methods that continue to prove themselves across research and real life. They improve how fast you move, how long you can keep going, and how confident you feel while doing it.
-    </p>
-
-    <p class="font-sans text-base leading-relaxed mb-4">
-      These are the five most powerful and scientifically supported ways to build stamina. Use them together and you will transform the way your body handles effort.
-    </p>
-
-    <h3 class="text-2xl font-bold font-sans mt-6 mb-3">1. High Intensity Interval Training HIIT</h3>
-    <p class="font-sans text-base leading-relaxed mb-4">
-      Your heart becomes a high performance engine
-      <br/><br/>
-      Imagine pushing your body near its top speed for a very short burst. Then you slow down just long enough to catch your breath before doing it again. That is HIIT. It could be sprinting for thirty seconds and then walking for one minute. Or fast cycling up a hill then riding easy on a flat.
-      <br/><br/>
-      What makes HIIT special is that it asks your heart and lungs to perform at their maximum capacity. They are forced to deliver oxygen rapidly and recover quickly before the next burst. This creates fast improvements in cardiovascular power.
-      <br/><br/>
-      HIIT is incredibly efficient. In just a few minutes of high effort training, your endurance and energy levels improve more than they would from a long slow workout. It is perfect for people who want big fitness gains but do not have hours to spend exercising.
-      <br/><br/>
-      Regular HIIT teaches your body to stay calm under intense demand. Your breathing improves. Your heart pumps blood more powerfully. You feel stronger and less drained during all kinds of physical activities.
-    </p>
-
-    <h3 class="text-2xl font-bold font-sans mt-6 mb-3">2. Tempo Training</h3>
-    <p class="font-sans text-base leading-relaxed mb-4">
-      Learning to stay strong at a steady pace
-      <br/><br/>
-      Tempo training is a challenge of control and discipline. You move at a strong pace that you can maintain for twenty to sixty minutes. You cannot hold a casual conversation, but you are not gasping uncontrollably either. You are right in the middle zone. Tough but in control.
-      <br/><br/>
-      This method trains your body to tolerate and clear the burning feeling that usually forces you to slow down. Your muscles learn to process energy more efficiently. You delay that uncomfortable moment when your legs feel heavy and your breath becomes chaotic.
-      <br/><br/>
-      Tempo workouts help athletes run races faster. They help cyclists stay strong through long climbs. They help swimmers glide longer. And for regular fitness lovers, tempo training builds confidence. You begin to trust your body to maintain a higher speed without fear that you will suddenly crash.
-      <br/><br/>
-      If HIIT is about building maximum power, Tempo training is about learning how to use that power wisely for a long time.
-    </p>
-
-    <h3 class="text-2xl font-bold font-sans mt-6 mb-3">3. Maximal Sprint Training</h3>
-    <p class="font-sans text-base leading-relaxed mb-4">
-      Tiny bursts of effort that create huge change
-      <br/><br/>
-      This training involves very short and extremely explosive efforts. These sprints last less than thirty seconds but you must give everything you have. Then you take a longer break before repeating. Sometimes resistance like hills or a sled is added to make your muscles fight even harder.
-      <br/><br/>
-      Many people are surprised that such brief workouts can increase stamina. But when you sprint at maximum effort, your legs and heart are pushed beyond what they normally experience. This causes rapid adaptation.
-      <br/><br/>
-      Your body quickly becomes better at using fuel. Your muscles grow stronger and more resistant to exhaustion. Your legs feel more powerful at high speeds. Even everyday activities like climbing stairs or running to catch a bus feel easier.
-      <br/><br/>
-      Think of this method as a power upgrade. It turns your body into a machine that performs efficiently even when you are working fast.
-    </p>
-
-    <h3 class="text-2xl font-bold font-sans mt-6 mb-3">4. Circuit Resistance Training</h3>
-    <p class="font-sans text-base leading-relaxed mb-4">
-      Stronger muscles equal longer performance
-      <br/><br/>
-      Cardio alone cannot give you incredible stamina. If your muscles are weak or tire easily, your endurance will always be limited. That is where Circuit Resistance Training steps in.
-      <br/><br/>
-      You perform a set of strength exercises one after another with little or no rest between them. Squats followed by push ups followed by rows then a short break. Then you repeat.
-      <br/><br/>
-      Because your breaks are short, your heart keeps working the entire time just like in cardio. Meanwhile your muscles are growing stronger. They learn to repeat movement after movement without quitting.
-      <br/><br/>
-      This training extends the time your body can perform before individual muscles start giving up. It helps prevent burnout and injury. It also keeps your everyday life powerful. Carrying groceries, climbing stairs, lifting objects, and maintaining balance all become easier and safer.
-      <br/><br/>
-      Stamina is not only for sports. It supports every part of life.
-    </p>
-
-    <h3 class="text-2xl font-bold font-sans mt-6 mb-3">5. Cross Training and Steady Base Work</h3>
-    <p class="font-sans text-base leading-relaxed mb-4">
-      The long term foundation of endurance
-      <br/><br/>
-      Short powerful training sessions are important but they do not replace the need for steady moderate exercise. Long runs, relaxed cycling, and comfortable swimming allow your body to build deeper structural endurance.
-      <br/><br/>
-      This is where your blood flow improves, your lungs get stronger, and your heart becomes more efficient. Your bones and joints adapt to impact. Your brain learns to stay focused during long effort.
-      <br/><br/>
-      Cross training means using a mix of activities. If you only run your knees and ankles may take too much impact. If you only swim your bones may not become strong enough. But when you combine activities you stay strong from head to toe and avoid injuries.
-      <br/><br/>
-      This approach ensures you can train often without breaking down. It builds the stamina that lasts a lifetime.
-    </p>
-
-    <h3 class="text-2xl font-bold font-sans mt-6 mb-3">Putting It All Together</h3>
-    <p class="font-sans text-base leading-relaxed mb-4">
-      The master formula for endurance success
-      <br/><br/>
-      True stamina requires training all the systems that control fatigue. When you combine these five methods, your abilities multiply.
-      <br/><br/>
-      • Use HIIT to boost your heart power
-      <br/>
-      • Use Tempo workouts to stay fast for longer
-      <br/>
-      • Use Maximal Sprint sessions for fast results
-      <br/>
-      • Use Circuit Resistance Training to protect your muscles from quitting early
-      <br/>
-      • Use Cross Training and steady base work to strengthen your overall foundation
-      <br/><br/>
-      This combination makes your heart stronger your breathing smoother your muscles more resilient and your performance more reliable. Workouts that once felt painful become manageable. Long distances feel shorter. Tough days feel easier. You start to feel more energetic all the time.
-    </p>
-
-    <!-- Author Bio -->
-    <div class="border-t border-gray-200 mt-8 pt-6">
-      <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
-      <p class="text-sm text-gray-600 mt-1">
-        Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions. He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.
+      <p class="font-sans text-base leading-relaxed mb-4">
+        People often confuse stamina with motivation or excitement. But excitement disappears quickly. True stamina lives inside your body. It depends on how strong your heart is, how smoothly your lungs deliver oxygen, and how long your muscles can resist fatigue. If any one of these systems gives up, your performance drops. If all of them are trained correctly, you start feeling unstoppable.
       </p>
-    </div>
-  `
-},
+
+      <p class="font-sans text-base leading-relaxed mb-4">
+        The best part is this. You do not need fancy machines or the latest fitness trends to improve stamina. Sports science has spent decades studying athletes and everyday exercisers to find the most effective ways to build endurance. There are five top training methods that continue to prove themselves across research and real life. They improve how fast you move, how long you can keep going, and how confident you feel while doing it.
+      </p>
+
+      <p class="font-sans text-base leading-relaxed mb-4">
+        These are the five most powerful and scientifically supported ways to build stamina. Use them together and you will transform the way your body handles effort.
+      </p>
+
+      <h3 class="text-2xl font-bold font-sans mt-6 mb-3">1. High Intensity Interval Training HIIT</h3>
+      <p class="font-sans text-base leading-relaxed mb-4">
+        Your heart becomes a high performance engine
+        <br/><br/>
+        Imagine pushing your body near its top speed for a very short burst. Then you slow down just long enough to catch your breath before doing it again. That is HIIT. It could be sprinting for thirty seconds and then walking for one minute. Or fast cycling up a hill then riding easy on a flat.
+        <br/><br/>
+        What makes HIIT special is that it asks your heart and lungs to perform at their maximum capacity. They are forced to deliver oxygen rapidly and recover quickly before the next burst. This creates fast improvements in cardiovascular power.
+        <br/><br/>
+        HIIT is incredibly efficient. In just a few minutes of high effort training, your endurance and energy levels improve more than they would from a long slow workout. It is perfect for people who want big fitness gains but do not have hours to spend exercising.
+        <br/><br/>
+        Regular HIIT teaches your body to stay calm under intense demand. Your breathing improves. Your heart pumps blood more powerfully. You feel stronger and less drained during all kinds of physical activities.
+      </p>
+
+      <h3 class="text-2xl font-bold font-sans mt-6 mb-3">2. Tempo Training</h3>
+      <p class="font-sans text-base leading-relaxed mb-4">
+        Learning to stay strong at a steady pace
+        <br/><br/>
+        Tempo training is a challenge of control and discipline. You move at a strong pace that you can maintain for twenty to sixty minutes. You cannot hold a casual conversation, but you are not gasping uncontrollably either. You are right in the middle zone. Tough but in control.
+        <br/><br/>
+        This method trains your body to tolerate and clear the burning feeling that usually forces you to slow down. Your muscles learn to process energy more efficiently. You delay that uncomfortable moment when your legs feel heavy and your breath becomes chaotic.
+        <br/><br/>
+        Tempo workouts help athletes run races faster. They help cyclists stay strong through long climbs. They help swimmers glide longer. And for regular fitness lovers, tempo training builds confidence. You begin to trust your body to maintain a higher speed without fear that you will suddenly crash.
+        <br/><br/>
+        If HIIT is about building maximum power, Tempo training is about learning how to use that power wisely for a long time.
+      </p>
+
+      <h3 class="text-2xl font-bold font-sans mt-6 mb-3">3. Maximal Sprint Training</h3>
+      <p class="font-sans text-base leading-relaxed mb-4">
+        Tiny bursts of effort that create huge change
+        <br/><br/>
+        This training involves very short and extremely explosive efforts. These sprints last less than thirty seconds but you must give everything you have. Then you take a longer break before repeating. Sometimes resistance like hills or a sled is added to make your muscles fight even harder.
+        <br/><br/>
+        Many people are surprised that such brief workouts can increase stamina. But when you sprint at maximum effort, your legs and heart are pushed beyond what they normally experience. This causes rapid adaptation.
+        <br/><br/>
+        Your body quickly becomes better at using fuel. Your muscles grow stronger and more resistant to exhaustion. Your legs feel more powerful at high speeds. Even everyday activities like climbing stairs or running to catch a bus feel easier.
+        <br/><br/>
+        Think of this method as a power upgrade. It turns your body into a machine that performs efficiently even when you are working fast.
+      </p>
+
+      <h3 class="text-2xl font-bold font-sans mt-6 mb-3">4. Circuit Resistance Training</h3>
+      <p class="font-sans text-base leading-relaxed mb-4">
+        Stronger muscles equal longer performance
+        <br/><br/>
+        Cardio alone cannot give you incredible stamina. If your muscles are weak or tire easily, your endurance will always be limited. That is where Circuit Resistance Training steps in.
+        <br/><br/>
+        You perform a set of strength exercises one after another with little or no rest between them. Squats followed by push ups followed by rows then a short break. Then you repeat.
+        <br/><br/>
+        Because your breaks are short, your heart keeps working the entire time just like in cardio. Meanwhile your muscles are growing stronger. They learn to repeat movement after movement without quitting.
+        <br/><br/>
+        This training extends the time your body can perform before individual muscles start giving up. It helps prevent burnout and injury. It also keeps your everyday life powerful. Carrying groceries, climbing stairs, lifting objects, and maintaining balance all become easier and safer.
+        <br/><br/>
+        Stamina is not only for sports. It supports every part of life.
+      </p>
+
+      <h3 class="text-2xl font-bold font-sans mt-6 mb-3">5. Cross Training and Steady Base Work</h3>
+      <p class="font-sans text-base leading-relaxed mb-4">
+        The long term foundation of endurance
+        <br/><br/>
+        Short powerful training sessions are important but they do not replace the need for steady moderate exercise. Long runs, relaxed cycling, and comfortable swimming allow your body to build deeper structural endurance.
+        <br/><br/>
+        This is where your blood flow improves, your lungs get stronger, and your heart becomes more efficient. Your bones and joints adapt to impact. Your brain learns to stay focused during long effort.
+        <br/><br/>
+        Cross training means using a mix of activities. If you only run your knees and ankles may take too much impact. If you only swim your bones may not become strong enough. But when you combine activities you stay strong from head to toe and avoid injuries.
+        <br/><br/>
+        This approach ensures you can train often without breaking down. It builds the stamina that lasts a lifetime.
+      </p>
+
+      <h3 class="text-2xl font-bold font-sans mt-6 mb-3">Putting It All Together</h3>
+      <p class="font-sans text-base leading-relaxed mb-4">
+        The master formula for endurance success
+        <br/><br/>
+        True stamina requires training all the systems that control fatigue. When you combine these five methods, your abilities multiply.
+        <br/><br/>
+        • Use HIIT to boost your heart power
+        <br/>
+        • Use Tempo workouts to stay fast for longer
+        <br/>
+        • Use Maximal Sprint sessions for fast results
+        <br/>
+        • Use Circuit Resistance Training to protect your muscles from quitting early
+        <br/>
+        • Use Cross Training and steady base work to strengthen your overall foundation
+        <br/><br/>
+        This combination makes your heart stronger your breathing smoother your muscles more resilient and your performance more reliable. Workouts that once felt painful become manageable. Long distances feel shorter. Tough days feel easier. You start to feel more energetic all the time.
+      </p>
+
+      <div class="border-t border-gray-200 mt-8 pt-6">
+        <p class="font-bold text-lg text-black">Written by Ajinkya Inamdar</p>
+        <p class="text-sm text-gray-600 mt-1">
+          Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions.
+        </p>
+      </div>
+    `
+  },
 
 ];
