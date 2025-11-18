@@ -8,7 +8,15 @@ const BlogCard = ({ blog }) => {
       
       {/* Image with Category Badge */}
       <div className="relative">
-        <img src={blog.image} alt={blog.title} className="w-full h-48 object-cover" />
+        {/* SPEED FIX: Lazy load images that are not at the top of the page */}
+        <img 
+          src={blog.image} 
+          alt={blog.title} 
+          className="w-full h-48 object-cover" 
+          loading="lazy"
+          width="400" 
+          height="192" 
+        />
         {blog.category && (
           <span className="absolute bottom-2 left-2 bg-black bg-opacity-60 text-white text-xs px-2 py-1 rounded">
             {blog.category}
@@ -27,13 +35,14 @@ const BlogCard = ({ blog }) => {
             : blog.content.replace(/<[^>]+>/g, "").substring(0, 120) + "..."}
         </p>
 
-        {/* 🔥 FIXED: Use slug for SEO-friendly URL */}
-<Link
-  to={`/blog/${blog.slug}/${blog.id}`}
-  className="text-green-600 hover:underline font-medium"
->
-  Read More
-</Link>
+        {/* ACCESSIBILITY FIX: Darker green (700) for contrast & descriptive aria-label */}
+        <Link
+          to={`/blog/${blog.slug}/${blog.id}`}
+          className="text-green-700 hover:underline font-medium"
+          aria-label={`Read more about ${blog.title}`} 
+        >
+          Read More
+        </Link>
 
       </div>
     </div>

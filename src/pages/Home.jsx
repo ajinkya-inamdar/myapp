@@ -11,28 +11,22 @@ const Home = () => {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Ajinkya Inamdar - Engineer | Strategy & Leadership | AI & Health-tech</title>
-        
         <meta 
-          name="keywords" 
-          content="Ajinkya Inamdar, engineer, strategy, leadership, artificial intelligence, AI, health-tech, longevity, business, fitness, technology, blog"
-        />
-        <meta property="og:title" content="Ajinkya Inamdar - Engineer | Strategy & Leadership" />
-        <meta 
-          property="og:description" 
+          name="description" 
           content="Engineering graduate passionate about strategy, leadership, AI, and health-tech. Explore insights on business, health, and technology."
         />
+        {/* Note: Other generic meta tags are already in index.html, keeping only page-specific ones here */}
+        <meta property="og:title" content="Ajinkya Inamdar - Engineer | Strategy & Leadership" />
+        <meta property="og:description" content="Engineering graduate passionate about strategy, leadership, AI, and health-tech. Explore insights on business, health, and technology." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ajinkyainamdar.vercel.app/" />
         <meta property="og:image" content={profilePic} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ajinkya Inamdar - Engineer | Strategy & Leadership" />
-        <meta 
-          name="twitter:description" 
-          content="Passionate about strategy, leadership, AI, and health-tech. Explore business, health, and technology insights."
-        />
       </Helmet>
 
-      <div className="text-black px-4 sm:px-6 py-8 sm:py-10 min-h-screen">
+      {/* ACCESSIBILITY FIX: Wrapped in <main> landmark */}
+      <main className="text-black px-4 sm:px-6 py-8 sm:py-10 min-h-screen">
+        
         {/* Main H1 Tag for SEO */}
         <h1 className="sr-only">Ajinkya Inamdar - Engineer, Strategy, Leadership, AI & Health-tech</h1>
 
@@ -44,11 +38,15 @@ const Home = () => {
             transition={{ duration: 1 }}
             className="flex-shrink-0 mx-auto md:mx-0"
           >
+            {/* LCP FIX: Added fetchpriority and explicit dimensions */}
             <img
               src={profilePic}
               alt="Ajinkya Inamdar Profile Photo"
-              className="w-65 h-80 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg relative z-10"
-              style={{ marginTop: "20px" }}
+              fetchpriority="high"  // Tells browser to download this FIRST
+              loading="eager"       // Disables lazy loading for LCP element
+              width="288"           // Explicit width (w-72 approx) to prevent layout shift
+              height="384"          // Explicit height (h-96 approx)
+              className="w-65 h-80 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg relative z-10 mt-5"
             />
           </motion.div>
 
@@ -61,35 +59,33 @@ const Home = () => {
             <p className="mb-6 text-black-300 max-w-lg text-sm sm:text-base md:text-lg md:mx-0">
               I’m always open to exciting collaborations, innovative projects, or meaningful opportunities. Let’s create something amazing together!
             </p>
-           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-  <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-      if (isMobile) {
-        // Open email app on mobile
-        window.location.href = "mailto:ajinkyainamdar228@gmail.com?subject=Enquiry&body=Hi%20Ajinkya,";
-      } else {
-        // Open Gmail in browser on desktop
-        window.open(
-          "https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,",
-          "_blank"
-        );
-      }
-    }}
-    className="bg-white border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black hover:bg-white transition text-center text-sm sm:text-base"
-  >
-    Get in Touch
-  </a>
-</div>
-
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+              <a
+                href="mailto:ajinkyainamdar228@gmail.com"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+                  if (isMobile) {
+                    window.location.href = "mailto:ajinkyainamdar228@gmail.com?subject=Enquiry&body=Hi%20Ajinkya,";
+                  } else {
+                    window.open(
+                      "https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,",
+                      "_blank"
+                    );
+                  }
+                }}
+                className="bg-white border-2 border-grey px-4 py-2 sm:px-6 sm:py-3 rounded text-black hover:bg-white transition text-center text-sm sm:text-base"
+                aria-label="Send an email to Ajinkya Inamdar"
+              >
+                Get in Touch
+              </a>
+            </div>
           </div>
         </div>
 
         {/* About Me Section */}
         <div className="mt-16 sm:mt-5 max-w-6xl mx-auto px-4">
-          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 text-center md:text-left">
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 text-center md:text-left">
             About Me
           </h3>
           <div className="text-sm sm:text-base md:text-lg text-black-300 ">
@@ -122,12 +118,13 @@ const Home = () => {
             <a
               href="/blog"
               className="border-2 border-black px-6 py-2 rounded-md text-black font-semibold text-lg hover:bg-white hover:text-black transition"
+              aria-label="View all blog posts"
             >
               View All Blogs
             </a>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

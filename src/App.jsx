@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen bg-#eeeee4">
+      <div className="min-h-screen bg-[#eeeee4]">
         {/* Navbar */}
         <nav className="flex items-center justify-between px-6 py-4 bg-gray-900 bg-opacity-80 fixed w-full z-50">
           <div className="text-white text-2xl font-bold font-poppins">Ajinkya</div>
@@ -23,7 +23,12 @@ function App() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
+            {/* ACCESSIBILITY FIX: Added aria-label */}
+            <button 
+              onClick={() => setIsOpen(!isOpen)} 
+              className="text-white focus:outline-none"
+              aria-label="Toggle navigation menu"
+            >
               {isOpen ? (
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -52,10 +57,24 @@ function App() {
           {/* Logo Section */}
           <div className="flex justify-center items-center flex-wrap gap-8 py-8">
             <a href="https://vite.dev" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center">
-              <img src={viteLogo} className="w-16 md:w-24 h-16 md:h-24 transition-transform duration-300 hover:scale-110" alt="Vite logo" />
+              {/* CLS FIX: Added explicit width and height */}
+              <img 
+                src={viteLogo} 
+                className="w-16 md:w-24 h-16 md:h-24 transition-transform duration-300 hover:scale-110" 
+                alt="Vite logo" 
+                width="96" 
+                height="96"
+              />
             </a>
             <a href="https://react.dev" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center">
-              <img src={reactLogo} className="w-16 md:w-24 h-16 md:h-24 transition-transform duration-300 hover:scale-110" alt="React logo" />
+              {/* CLS FIX: Added explicit width and height */}
+              <img 
+                src={reactLogo} 
+                className="w-16 md:w-24 h-16 md:h-24 transition-transform duration-300 hover:scale-110" 
+                alt="React logo" 
+                width="96" 
+                height="96"
+              />
             </a>
           </div>
 

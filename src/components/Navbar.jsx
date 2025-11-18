@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className={`text-2xl font-bold transition-colors duration-300 ${
           location.pathname === '/' ? 'text-black' : 'text-black'
         }`}>
-          <Link to="/">Ajinkya Inamdar</Link>
+          <Link to="/" aria-label="Ajinkya Inamdar Home">Ajinkya Inamdar</Link>
         </div>
 
         {/* Desktop Menu */}
@@ -39,16 +39,19 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
+          {/* ACCESSIBILITY FIX: Added aria-label and aria-expanded */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="text-black focus:outline-none"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
           >
             {menuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" fill="none" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" viewBox="0 0 24 24" stroke="currentColor" fill="none" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
