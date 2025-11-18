@@ -1,27 +1,33 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import viteCompression from 'vite-plugin-compression'; // Import this
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(), 
+    tailwindcss(),
+    // SPEED FIX: Compress assets to make them load faster
+    viteCompression({
+      algorithm: 'gzip',
+      ext: '.gz',
+    })
+  ],
   base: '/',
   server: {
     historyApiFallback: true,
   },
-  // PERFORMANCE OPTIMIZATION ADDED BELOW
   build: {
-    // 1. Splitting code into smaller chunks to fix "Reduce unused JavaScript"
     rollupOptions: {
       output: {
         manualChunks: {
-          // Separates React core from your website logic for faster caching
-          vendor: ['react', 'react-dom'], 
+          vendor: ['react', 'react-dom', 'framer-motion', 'react-router-dom'], // Added more libs here
         },
       },
     },
-    // 2. Minify CSS and JS to reduce network payload
     cssCodeSplit: true, 
     chunkSizeWarningLimit: 500, 
+    minify: 'esbuild', // Faster minification
   }
 })
