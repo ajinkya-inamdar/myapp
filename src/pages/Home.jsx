@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import { blogPosts } from '../data/blogData';
 import BlogCard from '../components/BlogCard';
-import profilePic from "../assets/myphoto.jpg";
 
 const Home = () => {
   return (
@@ -20,7 +19,10 @@ const Home = () => {
         <meta property="og:description" content="Engineering graduate passionate about strategy, leadership, AI, and health-tech. Explore insights on business, health, and technology." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ajinkyainamdar.vercel.app/" />
-        <meta property="og:image" content={profilePic} />
+        
+        {/* SEO FIX: Pointing to the public image for correct social media previews */}
+        <meta property="og:image" content="https://ajinkyainamdar.vercel.app/profile.jpg" />
+        
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
@@ -38,9 +40,9 @@ const Home = () => {
             transition={{ duration: 1 }}
             className="flex-shrink-0 mx-auto md:mx-0"
           >
-            {/* LCP FIX: Added fetchpriority and explicit dimensions */}
+            {/* LCP FIX: Pointing to /profile.jpg in the public folder for instant loading */}
             <img
-              src={profilePic}
+              src="/profile.jpg"
               alt="Ajinkya Inamdar Profile Photo"
               fetchpriority="high"  // Tells browser to download this FIRST
               loading="eager"       // Disables lazy loading for LCP element
