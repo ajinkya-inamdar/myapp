@@ -10,8 +10,8 @@ const Home = () => {
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Ajinkya Inamdar - Engineer | Strategy & Leadership | AI & Health-tech</title>
-        <meta 
-          name="description" 
+        <meta
+          name="description"
           content="Engineering graduate passionate about strategy, leadership, AI, and health-tech. Explore insights on business, health, and technology."
         />
         {/* Note: Other generic meta tags are already in index.html, keeping only page-specific ones here */}
@@ -27,13 +27,17 @@ const Home = () => {
       </Helmet>
 
       {/* ACCESSIBILITY FIX: Wrapped in <main> landmark */}
-      <main className="text-black px-4 sm:px-6 py-8 sm:py-10 min-h-screen">
+      {/* CRITICAL FIX: Increased desktop padding using md:pt-32 (128px) 
+         This ensures plenty of space to clear potentially tall fixed desktop navbars. 
+         pt-20 is used for mobile/small screens.
+      */}
+      <main className="text-black px-4 sm:px-6 pt-25 md:pt-24 pb-8 sm:pb-10 min-h-screen">
         
         {/* Main H1 Tag for SEO */}
         <h1 className="sr-only">Ajinkya Inamdar - Engineer, Strategy, Leadership, AI & Health-tech</h1>
 
         {/* Intro Section */}
-        <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-6xl mx-auto mt-6 md:mt-10">
+        <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-10 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -44,11 +48,11 @@ const Home = () => {
             <img
               src="/profile.jpg"
               alt="Ajinkya Inamdar Profile Photo"
-              fetchpriority="high"  // Tells browser to download this FIRST
+              fetchpriority="high"   // Tells browser to download this FIRST
               loading="eager"       // Disables lazy loading for LCP element
               width="288"           // Explicit width (w-72 approx) to prevent layout shift
               height="384"          // Explicit height (h-96 approx)
-              className="w-65 h-80 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg relative z-10 mt-5"
+              className="w-65 h-80 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg relative z-10"
             />
           </motion.div>
 
