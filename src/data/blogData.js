@@ -30,7 +30,7 @@ export const blogPosts = [
       tags: ['Netflix', 'Work Culture', 'HR Innovation']
     },
     content: `
-      <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">Why Netflix’s “No Vacation Policy” Works</h1>
+      <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">How Netflix Turned Unlimited Vacation Into a Productivity Superpower</h1>
       <p class="font-serif text-lg leading-relaxed tracking-wide mb-4">
         <strong>Based on the book <em>No Rules Rules</em> by Netflix CEO Reed Hastings and Erin Meyer.</strong>
       </p>
@@ -186,7 +186,7 @@ export const blogPosts = [
       tags: ['AI', 'Human Oversight', 'Machine Learning', 'Technology', 'Prompt Engineering']
     },
     content: `
-      <h1 class="text-3xl font-extrabold font-sans mb-6 tracking-tight">The Day AI Taught Me a Lesson About Being Human</h1>
+      <h1 class="text-3xl font-extrabold font-sans mb-6 tracking-tight">When Artificial Intelligence Showed Me What Being Human Really Means</h1>
       
       <p>A few days ago, I stumbled upon a meme that made think something important.</p>
 
@@ -272,7 +272,7 @@ export const blogPosts = [
       tags: ['Stamina', 'Endurance', 'Fitness Science']
     },
     content: `
-      <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">The Science Backed Path to Unstoppable Stamina</h1>
+      <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">A Proven Scientific Blueprint for Peak Endurance</h1>
 
       <p class="font-sans text-base leading-relaxed mb-4">
         Stamina is the quiet power that helps you keep going long after others would have stopped. It is not just about feeling energetic for a moment. It is the deep fuel that allows you to perform at your best again and again. Whether you are running a race, performing on a stage, playing a sport, or simply moving through a busy workday, stamina is what strengthens you to endure without falling apart.
@@ -406,7 +406,7 @@ export const blogPosts = [
     tags: ['Longevity', 'Anti-aging', 'Health Span']
   },
   content: `
-      <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">Why We Age and How to Stop It</h1>
+      <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">Cracking the Code of Aging and the Quest to Reverse It</h1>
 
       <p class="font-sans text-base leading-relaxed mb-4">
       Imagine for a moment that you are walking through an old, overgrown garden. In the centre, hidden beneath vines and moss, stands a stone fountain. For centuries, explorers and alchemists have searched for this mythical spring, believing one sip would grant eternal youth. Today, we have replaced alchemists with scientists in white lab coats, and instead of magic maps, they use microscopes and DNA sequencers. They are asking the same ancient question: Can we stop time?
