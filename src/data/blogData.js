@@ -127,8 +127,6 @@ export const blogPosts = [
     },
     content: `
       <h1 class="text-3xl font-extrabold font-sans mb-4 tracking-tight">Beyond Effort: True Leadership is Ownership</h1>
-
-      <h3 class="text-2xl font-bold font-sans mt-6 mb-2 tracking-tight">Beyond Effort: True Leadership is Ownership</h3> 
       <p class="font-sans text-base leading-relaxed mb-4"> Many people assume leadership is about how hard you work. Long hours, dedication, and persistence certainly matter but effort alone doesn’t equal great leadership. What truly sets leaders apart is <strong>ownership</strong>: fully embracing responsibility for the success of their team, the obstacles in their way, and the direction they’re headed. </p> 
       <p class="font-sans text-base leading-relaxed mb-4"> Imagine a team working tirelessly but still falling short because the right tools or resources aren’t in place. As a manager, you might raise concerns, suggest improvements, or adapt within the boundaries given. That feels responsible and to an extent, it is. But here’s the catch: if the team doesn’t deliver, the world won’t ask about the lack of resources. They’ll want to know who was accountable. And accountability always lands at the leader’s desk. </p> 
       <p class="font-sans text-base leading-relaxed mb-4"> Fair or not, leadership brings with it an expectation: not just to keep things running, but to challenge systems, raise your voice when something isn’t working, secure what your team truly needs, and fight for solutions even when it’s uncomfortable. Because in the end, leaders are judged not by how much effort they put in, but by the outcomes they enable. </p> 
