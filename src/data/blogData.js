@@ -591,7 +591,7 @@ Most people obsess over lifespan which is how many years you stay alive. Medicin
 The goal is not to reach ninety only to spend the last decade unable to move without assistance. The goal is to reach ninety still able to play with your grandkids climb stairs or even plan a holiday. It is about staying at your best until very close to the end instead of suffering a long slow decline. 
 </p>
 
-<h2 class="text-2xl font-bold mt-6 mb-3">Pillar One Your Metabolism The Engine</h2>
+<h2 class="text-2xl font-bold mt-6 mb-3">Pillar One: Your Metabolism The Engine</h2>
 
 <p class="font-sans text-base leading-relaxed mb-4">
 Traditional checkups look at blood sugar or HbA1c and call it a day. If the numbers look normal, you are told everything is fine. 
@@ -609,7 +609,7 @@ A smarter approach is to check fasting insulin. Think of it as catching the engi
 Many people now use CGMs continuous glucose monitors to see in real time which foods spike their sugar. The goal is simple. Maintain a flat smooth glucose curve instead of wild ups and downs that exhaust your system. 
 </p>
 
-<h2 class="text-2xl font-bold mt-6 mb-3">Pillar Two The Heart The Pipes</h2>
+<h2 class="text-2xl font-bold mt-6 mb-3">Pillar Two: The Heart The Pipes</h2>
 
 <p class="font-sans text-base leading-relaxed mb-4">
 Heart disease remains the leading cause of death worldwide. Medicine 2.0 waits until the pipes are clogged before taking action. 
@@ -627,7 +627,7 @@ ApoB is a far better indicator because it counts the particles responsible for a
 The logic is simple. Prevent the traffic jam before the road gets blocked. 
 </p>
 
-<h2 class="text-2xl font-bold mt-6 mb-3">Pillar Three Movement The Closest Thing To Magic</h2>
+<h2 class="text-2xl font-bold mt-6 mb-3">Pillar Three: Movement The Closest Thing To Magic</h2>
 
 <p class="font-sans text-base leading-relaxed mb-4">
 If someone bottled the benefits of exercise into a pill it would be the most valuable drug in history. Nothing else comes close. 
@@ -649,7 +649,7 @@ Strength Training Muscle is the most underrated health asset. Without it aging b
 VO2 Max Training This is the top predictor of how long you will live. Improving your ability to use oxygen protects you from all cause mortality. 
 </p>
 
-<h2 class="text-2xl font-bold mt-6 mb-3">Pillar Four Early Detection And Modern Tools</h2>
+<h2 class="text-2xl font-bold mt-6 mb-3">Pillar Four: Early Detection And Modern Tools</h2>
 
 <p class="font-sans text-base leading-relaxed mb-4">
 Standard healthcare tells you to start screening at fixed ages like a colonoscopy at forty-five. Medicine 3.0 says start looking early not late. 
