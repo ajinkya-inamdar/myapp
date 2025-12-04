@@ -534,7 +534,7 @@ export const blogPosts = [
  {
   id: '6',
   slug: 'medicine-3-why-your-doctor-is-waiting-too-long',
-  title: 'Medicine 3.0: Why Your Doctor Is Waiting Too Long to Save Your Life And What To Do About It',
+  title: 'Medicine 3.0- Why Your Doctor Is Waiting Too Long to Save Your Life And What To Do About It',
   date: 'December 4, 2025',
   category: 'Health and Fitness',
   author: {
