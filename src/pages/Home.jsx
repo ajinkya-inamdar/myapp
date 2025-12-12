@@ -5,35 +5,55 @@ import { blogPosts } from '../data/blogData';
 import BlogCard from '../components/BlogCard';
 
 const Home = () => {
+  const siteUrl = "https://ajinkyainamdar.vercel.app";
+
+  const profileImage = `${siteUrl}/profile.jpg`;
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ajinkya Inamdar",
+    "url": siteUrl,
+    "image": profileImage
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": siteUrl,
+    "name": "Ajinkya Inamdar"
+  };
+
   return (
     <>
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Ajinkya Inamdar - Engineer | Strategy & Leadership | AI & Health-tech</title>
+
         <meta
           name="description"
           content="Engineering graduate passionate about strategy, leadership, AI, and health-tech. Explore insights on business, health, and technology."
         />
-        {/* Note: Other generic meta tags are already in index.html, keeping only page-specific ones here */}
+
+        <link rel="canonical" href={siteUrl + "/"} />
+
         <meta property="og:title" content="Ajinkya Inamdar - Engineer | Strategy & Leadership" />
-        <meta property="og:description" content="Engineering graduate passionate about strategy, leadership, AI, and health-tech. Explore insights on business, health, and technology." />
+        <meta property="og:description" content="Engineering graduate passionate about strategy, leadership, AI, and health-tech." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ajinkyainamdar.vercel.app/" />
-        
-        {/* SEO FIX: Pointing to the public image for correct social media previews */}
-        <meta property="og:image" content="https://ajinkyainamdar.vercel.app/profile.jpg" />
-        
+        <meta property="og:url" content={siteUrl + "/"} />
+        <meta property="og:image" content={profileImage} />
+        <meta property="og:image:alt" content="Ajinkya Inamdar Profile Photo" />
+
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={profileImage} />
+        <meta name="twitter:image:alt" content="Ajinkya Inamdar Profile Photo" />
+
+        <script type="application/ld+json">{JSON.stringify(personSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
       </Helmet>
 
-      {/* ACCESSIBILITY FIX: Wrapped in <main> landmark */}
-      {/* CRITICAL FIX: Increased desktop padding using md:pt-32 (128px) 
-         This ensures plenty of space to clear potentially tall fixed desktop navbars. 
-         pt-20 is used for mobile/small screens.
-      */}
       <main className="text-black px-4 sm:px-6 pt-25 md:pt-24 pb-8 sm:pb-10 min-h-screen">
-        
-        {/* Main H1 Tag for SEO */}
+
         <h1 className="sr-only">Ajinkya Inamdar - Engineer, Strategy, Leadership, AI & Health-tech</h1>
 
         {/* Intro Section */}
@@ -44,14 +64,13 @@ const Home = () => {
             transition={{ duration: 1 }}
             className="flex-shrink-0 mx-auto md:mx-0"
           >
-            {/* LCP FIX: Pointing to /profile.jpg in the public folder for instant loading */}
             <img
               src="/profile.jpg"
               alt="Ajinkya Inamdar Profile Photo"
-              fetchpriority="high"   // Tells browser to download this FIRST
-              loading="eager"       // Disables lazy loading for LCP element
-              width="288"           // Explicit width (w-72 approx) to prevent layout shift
-              height="384"          // Explicit height (h-96 approx)
+              fetchpriority="high"
+              loading="eager"
+              width="288"
+              height="384"
               className="w-65 h-80 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-lg shadow-lg relative z-10"
             />
           </motion.div>
@@ -59,12 +78,16 @@ const Home = () => {
           {/* About Section */}
           <div className="flex flex-col justify-center md:pl-6 lg:pl-10 text-left mt-4 md:mt-0">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">Hi, I'm Ajinkya Inamdar</h2>
+
             <p className="text-black-400 mb-3 md:mb-4 text-base sm:text-lg md:text-xl max-w-md md:mx-0">
               Engineer | Strategy, Management & Leadership | Artificial Intelligence | Human Longevity and Health-tech
             </p>
+
             <p className="mb-6 text-black-300 max-w-lg text-sm sm:text-base md:text-lg md:mx-0">
               I’m always open to exciting collaborations, innovative projects, or meaningful opportunities. Let’s create something amazing together!
             </p>
+
+            {/* ORIGINAL BUTTON RESTORED */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
               <a
                 href="mailto:ajinkyainamdar228@gmail.com"
@@ -72,7 +95,8 @@ const Home = () => {
                   e.preventDefault();
                   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
                   if (isMobile) {
-                    window.location.href = "mailto:ajinkyainamdar228@gmail.com?subject=Enquiry&body=Hi%20Ajinkya,";
+                    window.location.href =
+                      "mailto:ajinkyainamdar228@gmail.com?subject=Enquiry&body=Hi%20Ajinkya,";
                   } else {
                     window.open(
                       "https://mail.google.com/mail/?view=cm&fs=1&to=ajinkyainamdar228@gmail.com&su=Enquiry&body=Hi%20Ajinkya,",
@@ -94,7 +118,8 @@ const Home = () => {
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 text-center md:text-left">
             About Me
           </h3>
-          <div className="text-sm sm:text-base md:text-lg text-black-300 ">
+
+          <div className="text-sm sm:text-base md:text-lg text-black-300">
             <p className="mb-4 sm:mb-6">
               Ajinkya Inamdar is an engineering graduate with a strong foundation in technology and a growing passion for leadership, management, longevity and optimal health solutions.
             </p>
@@ -102,16 +127,15 @@ const Home = () => {
               He continuously explore topics like business strategy, leadership and Health-tech to bridge the gap between technical execution and User driven solutions.
             </p>
             <p className="mb-4 sm:mb-6">
-              He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights. Whether you're here to connect, reflect, or stay ahead of the curve, there's something here for you.
+              He write blogs that explore topics related to business, health, optimal fitness, longevity, psychology, philosophy, technology and current trends offering valuable insights.
             </p>
           </div>
         </div>
 
         {/* Latest Blog Posts */}
         <div className="max-w-6xl mx-auto px-4 py-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-black">
-            Latest Blog Posts
-          </h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-black">Latest Blog Posts</h2>
+
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts
               .sort((a, b) => new Date(b.date) - new Date(a.date))
@@ -120,6 +144,7 @@ const Home = () => {
                 <BlogCard key={post.id} blog={post} />
               ))}
           </div>
+
           <div className="flex justify-center mt-10">
             <a
               href="/blog"
